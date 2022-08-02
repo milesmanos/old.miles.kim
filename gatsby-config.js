@@ -7,19 +7,12 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    "gatsby-transformer-remark",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `notes`,
-        path: `${__dirname}/src/notes/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
+        name: `projects`,
+        path: `${__dirname}/src/projects/`,
       },
     },
   ],
