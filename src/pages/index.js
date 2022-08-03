@@ -1,9 +1,10 @@
-import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../components/Layout"
 import * as homeStyles from "../styles/home.module.css"
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <Layout>
       <section className={homeStyles.header}>
@@ -14,13 +15,29 @@ export default function Home() {
           </Link>
         </div>
         <div>
-          <img
-            src="/earthworm.jpg"
+          {/* <StaticImage
+            src="../images/earthworm.jpg"
             alt="earthworm"
+            placeholder="dominantColor"
             style={{ maxWidth: "100%" }}
+          /> */}
+          <GatsbyImage
+            image={data.file.childImageSharp.gatsbyImageData}
+            alt="home"
           />
         </div>
       </section>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query DynamicImage {
+    file(relativePath: { eq: "earthworm.jpg" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(layout: CONSTRAINED)
+      }
+    }
+  }
+`
