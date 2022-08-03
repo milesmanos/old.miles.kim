@@ -15,12 +15,6 @@ export default function Home({ data }) {
           </Link>
         </div>
         <div>
-          {/* <StaticImage
-            src="../images/earthworm.jpg"
-            alt="earthworm"
-            placeholder="dominantColor"
-            style={{ maxWidth: "100%" }}
-          /> */}
           <GatsbyImage
             image={data.file.childImageSharp.gatsbyImageData}
             alt="home"
