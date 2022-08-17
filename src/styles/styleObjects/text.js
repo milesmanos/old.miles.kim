@@ -22,5 +22,13 @@ export const text = {
         font-size: ${baseProps.fontSize.lg};
         line-height: ${baseProps.lineHeight.lg};
     `,
+    md: `
+        font-size: ${baseProps.fontSize.md};
+        line-height: ${baseProps.lineHeight.md};
+    `,
+    sm: `
+        font-size: ${baseProps.fontSize.sm};
+        line-height: ${baseProps.lineHeight.sm};
+    `,
   },
 }
