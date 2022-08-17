@@ -14,9 +14,11 @@ export const colors = {
     },
   },
   tint: {
-    black: "rgba(0, 0, 0, 0.3)",
+    black: "rgba(0, 0, 0, 0.91)",
+    white: "rgba(0, 0, 0, 0.91)",
   },
   bg: {
+    black: "rgba(0, 0, 0)",
     white: "rgba(255, 255, 255)",
   },
 }
