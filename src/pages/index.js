@@ -1,37 +1,30 @@
-import { graphql, Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import { css } from "linaria"
 import React from "react"
 import Layout from "../components/Layout"
-import * as homeStyles from "../styles/home.module.css"
+import "../styles/normalize.css"
+import { text } from "../styles/styleObjects/text"
 
-export default function Home({ data }) {
+const headerSty = css`
+  ${text.complete.lg}
+`
+
+export default function Home() {
   return (
     <Layout>
-      <section className={homeStyles.header}>
+      <section>
         <div>
-          <h1>Hello world!</h1>
-          <Link className={homeStyles.btn} to="/projects">
-            My Portfolio
-          </Link>
+          <p className={headerSty}>big paragraph</p>
+          <div>
+            <strong>Hello</strong>Hello world!
+          </div>
+          <Link to="/projects">My Portfolio</Link>
         </div>
         <div>
-          <GatsbyImage
-            image={data.file.childImageSharp.gatsbyImageData}
-            alt="home"
-          />
+          <StaticImage src="../images/earthworm.jpg" alt="home" />
         </div>
       </section>
     </Layout>
   )
 }
-
-export const query = graphql`
-  query DynamicImage {
-    file(relativePath: { eq: "earthworm.jpg" }) {
-      id
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED)
-      }
-    }
-  }
-`
