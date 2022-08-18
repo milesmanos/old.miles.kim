@@ -1,11 +1,11 @@
 import React from "react"
-import Layout from "../components/Layout"
+import HomeLayout from "../components/HomeLayout"
 
 export default function Writing() {
   return (
-    <Layout>
+    <HomeLayout>
       <h1>Writing</h1>
       <p>Dis be abou' me innit.</p>
-    </Layout>
+    </HomeLayout>
   )
 }

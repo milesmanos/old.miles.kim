@@ -3,10 +3,14 @@ import { css, cx } from "linaria"
 import React from "react"
 import { colors } from "../../styles/styleObjects/colors"
 
-const linkSty = css`
+const buttonSty = css`
+  line-height: inherit;
+  border: none;
+  background-color: inherit;
+  padding: 0px;
   display: inline-block;
   cursor: pointer;
-  box-shadow: inset 0 -2px 0 0 ${colors.content.black.tertiary};
+  box-shadow: inset 0 -2px 0 0 ${colors.content.black.line};
 `
 
 const blackPrimary = css`
@@ -24,19 +28,20 @@ const blackSecondary = css`
   }
 `
 
-export default function TextLink({ color, children }) {
+export default function TextButton({ color, onClick, children }) {
   return (
-    <Link
+    <button
       className={cx(
-        linkSty,
+        buttonSty,
         color === "blackPrimary"
           ? blackPrimary
           : color === "blackSecondary"
           ? blackSecondary
           : null
       )}
+      onClick={onClick}
     >
       {children}
-    </Link>
+    </button>
   )
 }

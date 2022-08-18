@@ -1,11 +1,11 @@
 import React from "react"
-import Layout from "../components/Layout"
+import HomeLayout from "../components/HomeLayout"
 
 export default function Art() {
   return (
-    <Layout>
+    <HomeLayout>
       <h1>Art</h1>
       <p>Dis be abou' me innit.</p>
-    </Layout>
+    </HomeLayout>
   )
 }

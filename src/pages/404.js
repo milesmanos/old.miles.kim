@@ -1,10 +1,10 @@
 import React from "react"
-import Layout from "../components/Layout"
+import HomeLayout from "../components/HomeLayout"
 
 export default function NotFound() {
   return (
-    <Layout>
+    <HomeLayout>
       <h1>404</h1>
-    </Layout>
+    </HomeLayout>
   )
 }
