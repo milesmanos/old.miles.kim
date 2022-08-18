@@ -10,13 +10,16 @@ const container = css`
   align-items: center;
   justify-content: center;
   gap: 8px;
+  border-radius: 99px;
+  -webkit-box-shadow: inset 0px 0px 0px 1px ${colors.content.black.line};
+  -moz-box-shadow: inset 0px 0px 0px 1px ${colors.content.black.line};
+  box-shadow: inset 0px 0px 0px 1px ${colors.content.black.line};
 `
-
 const navLink = css`
-  color: ${colors.content.black.secondary};
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${colors.content.black.secondary};
   border-radius: 99px;
   cursor: pointer;
   height: 48px;
@@ -25,33 +28,26 @@ const navLink = css`
     background-color: ${colors.tint.lightBlack};
   }
 `
-
 const active = css`
   color: ${colors.content.white.primary};
   background-color: ${colors.tint.black};
 `
 
-const anchorSty = css`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
+const NavTabs = () => (
+  <nav className={container}>
+    <Link activeClassName={active} className={navLink} to="/">
+      All
+    </Link>
+    <Link activeClassName={active} className={navLink} to="/design">
+      Design
+    </Link>
+    <Link activeClassName={active} className={navLink} to="/art">
+      Art
+    </Link>
+    <Link activeClassName={active} className={navLink} to="/writing">
+      Writing
+    </Link>
+  </nav>
+)
 
-export default function NavTabs() {
-  return (
-    <div className={container}>
-      <Link activeClassName={active} className={navLink} to="/">
-        <a className={anchorSty}>All Projects</a>
-      </Link>
-      <Link activeClassName={active} className={navLink} to="/design">
-        <a className={anchorSty}>Design</a>
-      </Link>
-      <Link activeClassName={active} className={navLink} to="/art">
-        <a className={anchorSty}>Art</a>
-      </Link>
-      <Link activeClassName={active} className={navLink} to="/writing">
-        <a className={anchorSty}>Writing</a>
-      </Link>
-    </div>
-  )
-}
+export default NavTabs
