@@ -1,6 +1,5 @@
 import { css, cx } from "linaria"
 import React from "react"
-import { text } from "./text"
 
 const noFlexShrink = css`
   flex-shrink: 0;
@@ -10,11 +9,17 @@ const width4px = css`
   width: 4px;
 `
 
-const height96px = css`
-  height: 96px;
-`
 const height4px = css`
   height: 4px;
+`
+const height48px = css`
+  height: 48px;
+`
+const height64px = css`
+  height: 64px;
+`
+const height96px = css`
+  height: 96px;
 `
 
 export const Spacers = {
@@ -23,6 +28,8 @@ export const Spacers = {
   },
   Vertical: {
     _4px: () => <div className={cx(noFlexShrink, height4px)} />,
+    _48px: () => <div className={cx(noFlexShrink, height48px)} />,
+    _64px: () => <div className={cx(noFlexShrink, height64px)} />,
     _96px: () => <div className={cx(noFlexShrink, height96px)} />,
   },
 }

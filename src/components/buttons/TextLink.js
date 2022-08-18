@@ -6,7 +6,7 @@ import { colors } from "../../styles/styleObjects/colors"
 const linkSty = css`
   display: inline-block;
   cursor: pointer;
-  box-shadow: inset 0 -1px 0 0 ${colors.content.black.barely};
+  box-shadow: inset 0 -1px 0 0 ${colors.content.black.line};
 `
 
 const blackSecondary = css`

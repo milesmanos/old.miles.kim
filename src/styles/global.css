@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"); */
-
 @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=b857109e-239b-4f8c-8891-24047d97c670&fontids=1491963,1491988,1492557,1492559");
 @font-face {
   font-family: "Neue Haas Unica";
@@ -45,11 +43,10 @@
   font-family: "Neue Haas Unica", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: black;
+  transition-property: color, border-color, background-color, opacity,
+    box-shadow;
+  transition-duration: 0.2s;
 }
-/* html {
-  padding: 96px 24px;
-} */
 body {
   background-color: #ffffff;
   line-height: 1.5;
