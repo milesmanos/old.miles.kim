@@ -6,14 +6,21 @@ import { colors } from "../../styles/styleObjects/colors"
 const linkSty = css`
   display: inline-block;
   cursor: pointer;
-  box-shadow: inset 0 -1px 0 0 ${colors.content.black.line};
+  box-shadow: inset 0 -2px 0 0 ${colors.content.black.tertiary};
 `
 
+const blackPrimary = css`
+  color: ${colors.content.black.primary};
+  :hover {
+    color: ${colors.content.black.primary};
+    box-shadow: inset 0 -2px 0 0 ${colors.content.black.primary};
+  }
+`
 const blackSecondary = css`
   color: ${colors.content.black.secondary};
   :hover {
     color: ${colors.content.black.primary};
-    box-shadow: inset 0 -1px 0 0 ${colors.content.black.secondary};
+    box-shadow: inset 0 -2px 0 0 ${colors.content.black.secondary};
   }
 `
 
@@ -22,7 +29,11 @@ export default function TextLink({ color, children }) {
     <Link
       className={cx(
         linkSty,
-        color === "blackSecondary" ? blackSecondary : null
+        color === "blackPrimary"
+          ? blackPrimary
+          : color === "blackSecondary"
+          ? blackSecondary
+          : null
       )}
     >
       {children}

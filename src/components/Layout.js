@@ -25,6 +25,9 @@ const headerSty = css`
   ${breakpoints.md_sm} {
     ${text.complete.md};
   }
+  span {
+    font-weight: ${text.weight.bold};
+  }
 `
 
 // Nav styles
@@ -63,10 +66,12 @@ export default function Layout({ children }) {
       <header className={headerSty}>
         <strong>MILES KIM</strong>
         <br />
-        <br />
-        I’m a designer, artist, and writer based in San Francisco. Here’s a
-        mishmash of my projects in all disciplines.{" "}
-        <TextLink color="blackSecondary">More&nbsp;about&nbsp;me</TextLink>
+        <br />^ I’m a <span style={{ color: colors.red }}> designer</span>,
+        <span style={{ color: colors.green }}> artist</span>, and{" "}
+        <span style={{ color: colors.blue }}> writer</span> based in San
+        Francisco. Here’s a single-page mishmash of my projects in all
+        disciplines.{" "}
+        <TextLink color="blackPrimary">More&nbsp;about&nbsp;me</TextLink>
       </header>
       <Spacers.Vertical._64px />
 
