@@ -1,51 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=b857109e-239b-4f8c-8891-24047d97c670&fontids=1491963,1491988,1492557,1492559");
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("Fonts/1491963/39bb8fb3-84a4-4ab8-ae45-db1834f5d807.woff2")
+      format("woff2"),
+    url("Fonts/1491963/96fd4fb4-75db-412f-986d-d65380ee0ccf.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("Fonts/1491988/e0d80810-f7e3-4fea-8c57-ef8116f0465d.woff2")
+      format("woff2"),
+    url("Fonts/1491988/27645c8a-608b-4abf-a2f1-c4407b576723.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("Fonts/1492557/dfa9d078-533c-44d9-9dd9-deaafbff5a96.woff2")
+      format("woff2"),
+    url("Fonts/1492557/4142b00a-232a-49e8-803c-541f8b932fa1.woff")
+      format("woff");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Neue Haas Unica";
+  src: url("Fonts/1492559/cc589c6c-1ce4-4279-8684-c378497d1c68.woff2")
+      format("woff2"),
+    url("Fonts/1492559/8546c78d-5a38-4c7b-9371-5a70d803922a.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
 
+/* Applies everywhere */
 * {
   margin: 0;
-  padding: 0;
   text-decoration: none;
-  font-family: "Anonymous Pro", monospace;
-  color: black;
+  font-family: "Neue Haas Unica", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition-property: color, border-color, background-color, opacity,
+    box-shadow;
+  transition-duration: 0.2s;
 }
-html,
 body {
-  min-height: 100%;
-}
-body {
-  background-color: #f4f4f4;
-  padding: 24px;
-}
-p {
-  margin: 16px auto;
-  line-height: 1.5em;
-}
-
-/* layout & nav */
-.layout {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 40px auto;
-}
-nav .links {
-  display: inline-block;
-  text-align: right;
-}
-nav a {
-  display: inline-block;
-  margin-left: 20px;
-  font-weight: 400;
-  padding-bottom: 8px;
-  border-bottom: 3px solid transparent;
-}
-nav a:hover {
-  color: red;
-}
-footer p {
-  text-align: center;
-  color: #bbb;
-  margin: 40px auto;
+  background-color: #ffffff;
+  line-height: 1.5;
 }
