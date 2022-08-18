@@ -1,9 +1,9 @@
 ---
-title: Retro Gaming Zone
-stack: Svelte & Firebase
+title: Ahoy
+stack: is a platform for bringing ideas to life.
 slug: retro-gaming-zone
-date: 2021-01-03T00:00:00+00:00
-thumb: ../images/thumbs/gaming.png
+date: Jan 2022 – Present
+thumb: ../images/thumbs/ahoy.jpg
 featuredImg: ../images/featured/gaming-banner.png
 ---
 

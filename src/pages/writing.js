@@ -1,10 +1,10 @@
 import React from "react"
 import HomeLayout from "../components/HomeLayout"
 
-export default function About() {
+export default function Writing() {
   return (
     <HomeLayout>
-      <h1>About</h1>
+      <h1>Writing</h1>
       <p>Dis be abou' me innit.</p>
     </HomeLayout>
   )
