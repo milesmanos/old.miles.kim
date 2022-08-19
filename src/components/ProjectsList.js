@@ -2,7 +2,7 @@ import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link, StaticQuery } from "gatsby"
 import { text } from "../styles/styleObjects/text"
-import { css } from "linaria"
+import { css, cx } from "linaria"
 import { colors } from "../styles/styleObjects/colors"
 import LineHeightSpacer from "../components/structure/LineHeightSpacer"
 import { breakpoints } from "../styles/styleObjects/layout"
@@ -33,9 +33,33 @@ const title = css`
     box-shadow: inset 0 -1px 0 0 ${colors.content.black.primary};
   }
 `
+const label = css`
+  position: relative;
+`
 const desc = css``
 const date = css`
   color: ${colors.content.black.secondary};
+`
+const colorDot = css`
+  position: absolute;
+  left: -16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background-color: red;
+  top: 12px;
+  ${breakpoints.md_sm} {
+    top: 9.5px;
+  }
+`
+const designColor = css`
+  background-color: ${colors.red};
+`
+const artColor = css`
+  background-color: ${colors.green};
+`
+const writingColor = css`
+  background-color: ${colors.blue};
 `
 
 export default function ProjectsList() {
@@ -50,6 +74,7 @@ export default function ProjectsList() {
               frontmatter {
                 title
                 description
+                category
                 startDate
                 endDate
                 sortDate
@@ -88,16 +113,24 @@ export default function ProjectsList() {
                     alt={project.frontmatter.title}
                     className={projectImage}
                   />
-                  <LineHeightSpacer />
-                  <span className={title}>
-                    {project.frontmatter.title}
-                  </span>{" "}
-                  <span className={desc}>
-                    {project.frontmatter.description}
-                  </span>{" "}
-                  <div className={date} style={{ display: "inline-block" }}>
-                    {project.frontmatter.startDate}&nbsp;
-                    {project.frontmatter.endDate}
+                  <LineHeightSpacer isEm />
+                  <div className={label}>
+                    <span className={title}>{project.frontmatter.title}</span>{" "}
+                    <span className={desc}>
+                      {project.frontmatter.description}
+                    </span>{" "}
+                    <div className={date} style={{ display: "inline-block" }}>
+                      {project.frontmatter.startDate}&nbsp;
+                      {project.frontmatter.endDate}
+                    </div>
+                    <div
+                      className={cx(
+                        colorDot,
+                        project.frontmatter.category === "design"
+                          ? designColor
+                          : writingColor
+                      )}
+                    />
                   </div>
                 </Link>
               </div>
