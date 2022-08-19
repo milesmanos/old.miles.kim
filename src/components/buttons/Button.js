@@ -1,6 +1,6 @@
 import { css, cx } from "linaria"
 import React from "react"
-import { MailSvg } from "../../icons/mailSvg"
+import { MailSvg } from "../../icons/MailSvg"
 import { colors } from "../../styles/styleObjects/colors"
 import { text } from "../../styles/styleObjects/text"
 
