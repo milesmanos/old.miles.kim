@@ -10,7 +10,12 @@ const one = css`
 const two = css`
   height: 3em;
 `
+const em = css`
+  height: 1em;
+`
 
-export default function LineHeightSpacer({ isTwoLines }) {
-  return <div className={cx(noFlexShrink, isTwoLines ? two : one)} />
+export default function LineHeightSpacer({ isTwoLines, isEm }) {
+  return (
+    <div className={cx(noFlexShrink, isTwoLines ? two : isEm ? em : one)} />
+  )
 }

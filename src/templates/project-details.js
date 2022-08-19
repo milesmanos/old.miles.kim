@@ -12,12 +12,12 @@ export default function ProjectDetails({ data }) {
       <div>
         <h2>{title}</h2>
         <h3>{stack}</h3>
-        <div>
+        {/* <div>
           <GatsbyImage
             image={featuredImg.childImageSharp.gatsbyImageData}
             alt={title}
           />
-        </div>
+        </div> */}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </ProjectLayout>
@@ -29,14 +29,15 @@ export const query = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        stack
+        description
         title
-        featuredImg {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
-          }
-        }
       }
     }
   }
 `
+
+// featuredImg {
+//   childImageSharp {
+//     gatsbyImageData(layout: FULL_WIDTH)
+//   }
+// }
