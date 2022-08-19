@@ -2,7 +2,6 @@ import React from "react"
 import HomeLayout from "../components/HomeLayout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
-import "../styles/projects.css"
 import { text } from "../styles/styleObjects/text"
 import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors"
@@ -22,6 +21,13 @@ const projectsList = css`
   }
 `
 
+const projectImage = css`
+  width: 100%;
+  border-radius: 12px;
+  img {
+    border-radius: 12px;
+  }
+`
 const title = css`
   text-transform: uppercase;
   font-weight: ${text.weight.bold};
@@ -50,7 +56,8 @@ export default function Home({ data }) {
             <GatsbyImage
               image={project.frontmatter.thumb.childImageSharp.gatsbyImageData}
               alt="home"
-              className="projectImage"
+              // className="projectImage"
+              className={projectImage}
             />
             <LineHeightSpacer />
             <span className={title}>{project.frontmatter.title}</span>{" "}
