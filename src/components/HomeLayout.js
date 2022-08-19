@@ -9,11 +9,11 @@ import LineHeightSpacer from "./structure/LineHeightSpacer"
 import TextButton from "./buttons/TextButton"
 import NavTabs from "./NavTabs"
 import { StaticImage } from "gatsby-plugin-image"
-// import Navbar from "./Navbar"
 
 // Z-INDICES
 // Navbar: 99
 
+// Page Styles
 const pageWrapper = css`
   color: ${colors.content.black.primary};
   margin-left: auto;
@@ -39,8 +39,6 @@ const hiddenDragon = css`
 const profile = css`
   img {
     border-radius: 99px;
-    height: 192px;
-    width: 192px;
   }
 `
 
@@ -66,28 +64,34 @@ export default function HomeLayout({ children }) {
           <div className={hiddenDragon}>
             <br />
             I’m a bit all over the place as a person and thought I’d build a
-            single-page mishmash of a website in that spirit. I really only
-            divide what I do into two categories:
+            single-page mishmash of a website in that spirit. I divide what I do
+            into two categories:
             <br />
             <br />
             1—I’m a <strong>product designer</strong> who takes ideas from 0 to
-            1, with branding, messaging, architecture, and graphics. I like
-            being the only designer (or one of a few) defining the user-facing
-            backbone of a product.
+            1, defining the user-facing backbone of a product. I’m learning
+            frontend development and built this site from scratch.
             <br />
             <br />
             2—I’m an <strong>artist</strong>. This one’s a bit harder to pin
             down, but ever since I can remember I’ve been scribbling away,
-            trying to get at... something. Lately, writing has been my medium,
+            trying to get at something. Lately, writing has been my medium,
             though it shifts.
             <br />
             <br />I also like to play guitar, surf, and listen to music.
+            <br />
+            <br />
+            Enjoy!
+            <br />
+            Miles
             <br />
             <br />
             <StaticImage
               src="../images/profile.jpg"
               alt="me"
               className={profile}
+              width={192}
+              aspectRatio={1}
             />
             <br />
             <br />
