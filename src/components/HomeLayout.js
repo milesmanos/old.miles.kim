@@ -37,9 +37,11 @@ const hiddenDragon = css`
   /* crouching tiger */
 `
 const profile = css`
-  border-radius: 99px;
-  height: 192px;
-  width: 192px;
+  img {
+    border-radius: 99px;
+    height: 192px;
+    width: 192px;
+  }
 `
 
 export default function HomeLayout({ children }) {
@@ -53,7 +55,7 @@ export default function HomeLayout({ children }) {
         <LineHeightSpacer />^{" "}
         <span style={{ color: colors.red }}> Designer</span>,
         <span style={{ color: colors.green }}> artist</span>, &{" "}
-        <span style={{ color: colors.blue }}> writer</span> @ San Francisco.{" "}
+        <span style={{ color: colors.blue }}> writer</span> in San Francisco.{" "}
         <TextButton
           onClick={() => setShowAbout(!showAbout)}
           color="blackSecondary"
@@ -64,20 +66,20 @@ export default function HomeLayout({ children }) {
           <div className={hiddenDragon}>
             <br />
             I’m a bit all over the place as a person and thought I’d build a
-            single-page mishmash of a website in that spirit. Breaking things up
-            into categories helps people parse, but I really only divide what I
-            do in two ways.
+            single-page mishmash of a website in that spirit. I really only
+            divide what I do into two categories:
             <br />
             <br />
-            1—I’m a product designer who takes ideas from 0 to 1, with branding,
-            messaging, architecture, and graphics. I like being the only
-            designer (or one of a few) defining the user-facing backbone of a
-            product.
+            1—I’m a <strong>product designer</strong> who takes ideas from 0 to
+            1, with branding, messaging, architecture, and graphics. I like
+            being the only designer (or one of a few) defining the user-facing
+            backbone of a product.
             <br />
             <br />
-            2—I’m an artist. This one’s a bit harder to pin down, but ever since
-            I can remember I’ve been scribbling away, trying to get at...
-            something. Lately, writing has been my medium, though it shifts.
+            2—I’m an <strong>artist</strong>. This one’s a bit harder to pin
+            down, but ever since I can remember I’ve been scribbling away,
+            trying to get at... something. Lately, writing has been my medium,
+            though it shifts.
             <br />
             <br />I also like to play guitar, surf, and listen to music.
             <br />

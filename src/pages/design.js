@@ -2,7 +2,6 @@ import React from "react"
 import HomeLayout from "../components/HomeLayout"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link } from "gatsby"
-import "../styles/projects.css"
 
 export default function Design({ data }) {
   const projects = data.projects.nodes
