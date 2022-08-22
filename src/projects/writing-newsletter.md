@@ -1,6 +1,6 @@
 ---
 title: My Newsletter
-description: has been described as a "public diary.
+description: has been described as a "public diary".
 category: writing
 slug: newsletter
 startDate: Mar 2022

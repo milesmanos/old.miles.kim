@@ -1,23 +1,19 @@
 import React from "react"
 import ProjectLayout from "../components/ProjectLayout.js"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
+import LineHeightSpacer from "../components/structure/LineHeightSpacer.js"
+
+// styles in ../components/ProjectLayout.js
 
 export default function ProjectDetails({ data }) {
   const { html } = data.markdownRemark
-  const { title, stack, featuredImg } = data.markdownRemark.frontmatter
+  const { title } = data.markdownRemark.frontmatter
 
   return (
     <ProjectLayout>
       <div>
-        <h2>{title}</h2>
-        <h3>{stack}</h3>
-        {/* <div>
-          <GatsbyImage
-            image={featuredImg.childImageSharp.gatsbyImageData}
-            alt={title}
-          />
-        </div> */}
+        <h1>{title}</h1>
+        <LineHeightSpacer isTwoLines />
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </ProjectLayout>
@@ -35,9 +31,3 @@ export const query = graphql`
     }
   }
 `
-
-// featuredImg {
-//   childImageSharp {
-//     gatsbyImageData(layout: FULL_WIDTH)
-//   }
-// }

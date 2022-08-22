@@ -49,7 +49,10 @@ const colorDot = css`
   background-color: red;
   top: 12px;
   ${breakpoints.md_sm} {
-    top: 9.5px;
+    top: 9px;
+    left: -12px;
+    width: 6px;
+    height: 6px;
   }
 `
 const designColor = css`
@@ -106,14 +109,20 @@ export default function ProjectsList() {
                   className={projectLink}
                   to={"/projects/" + project.frontmatter.slug}
                 >
-                  <GatsbyImage
-                    image={
-                      project.frontmatter.thumb.childImageSharp.gatsbyImageData
-                    }
-                    alt={project.frontmatter.title}
-                    className={projectImage}
-                  />
-                  <LineHeightSpacer isEm />
+                  {project.frontmatter.thumb && (
+                    <>
+                      <GatsbyImage
+                        image={
+                          project.frontmatter.thumb.childImageSharp
+                            .gatsbyImageData
+                        }
+                        alt={project.frontmatter.title}
+                        className={projectImage}
+                      />
+                      <LineHeightSpacer isEm />
+                    </>
+                  )}
+
                   <div className={label}>
                     <span className={title}>{project.frontmatter.title}</span>{" "}
                     <span className={desc}>
