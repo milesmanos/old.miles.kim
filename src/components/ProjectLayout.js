@@ -36,7 +36,7 @@ const pageWrapper = css`
     line-height: 36px;
     margin-bottom: ${text.lineHeight.md};
     ${breakpoints.md_sm} {
-      margin-top: text.lineHeight.md;
+      margin-top: ${text.lineHeight.md};
       ${text.complete.md};
       margin-bottom: ${text.lineHeight.sm};
     }
