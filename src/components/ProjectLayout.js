@@ -31,10 +31,13 @@ const pageWrapper = css`
     }
   }
   h2 {
-    margin-top: calc(1.5 * ${text.lineHeight.md});
-    ${text.complete.md};
+    margin-top: 36px;
+    font-size: 24px;
+    line-height: 36px;
     margin-bottom: ${text.lineHeight.md};
     ${breakpoints.md_sm} {
+      margin-top: text.lineHeight.md;
+      ${text.complete.md};
       margin-bottom: ${text.lineHeight.sm};
     }
   }
@@ -45,6 +48,12 @@ const pageWrapper = css`
       ${text.complete.sm};
       margin-bottom: ${text.lineHeight.sm};
     }
+  }
+  hr {
+    border: 0px;
+    border-bottom: 1px solid ${colors.content.black.line};
+    margin-top: 3em;
+    margin-bottom: 3em;
   }
 `
 

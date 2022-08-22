@@ -5,15 +5,23 @@ import LineHeightSpacer from "../components/structure/LineHeightSpacer.js"
 import { Spacers } from "../styles/styleObjects/spacers.js"
 import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors.js"
+import { text } from "../styles/styleObjects/text.js"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 // Content styles in ../components/ProjectLayout.js
 const iotas = css`
+  ${text.complete.sm}
   color: ${colors.content.black.secondary};
+  text-transform: capitalize;
+`
+const slash = css`
+  color: ${colors.content.black.line};
 `
 
 export default function ProjectDetails({ data }) {
   const { html } = data.markdownRemark
-  const { title, place, startDate, subType } = data.markdownRemark.frontmatter
+  const { title, place, startDate, subType, featuredImg } =
+    data.markdownRemark.frontmatter
 
   return (
     <ProjectLayout>
@@ -21,14 +29,22 @@ export default function ProjectDetails({ data }) {
         <h1>{title}</h1>
         <Spacers.Vertical._8px />
         <div className={iotas}>
-          hi
           {place}
-          {" / "}
+          <span className={slash}>{" / "}</span>
           {startDate}
-          {" / "}
+          <span className={slash}>{" / "}</span>
           {subType}
         </div>
         <LineHeightSpacer isTwoLines />
+        {featuredImg && (
+          <>
+            <GatsbyImage
+              image={featuredImg.childImageSharp.gatsbyImageData}
+              alt={title}
+            />
+            <LineHeightSpacer isTwoLines />
+          </>
+        )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </ProjectLayout>
@@ -42,6 +58,14 @@ export const query = graphql`
       frontmatter {
         description
         title
+        place
+        startDate
+        subType
+        featuredImg {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
+          }
+        }
       }
     }
   }

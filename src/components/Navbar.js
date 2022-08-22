@@ -5,7 +5,6 @@ import { colors } from "../styles/styleObjects/colors"
 import { breakpoints } from "../styles/styleObjects/layout"
 import NavTabs from "./NavTabs"
 import { text } from "../styles/styleObjects/text"
-import { pagePadding } from "../styles/styleObjects/layout"
 import { MailSvg } from "../icons/MailSvg"
 import { ChevronBackSvg } from "../icons/ChevronBackSvg"
 
@@ -20,14 +19,11 @@ const navLayout = css`
   left: 0px;
   z-index: 99;
   height: 48px;
-  ${pagePadding.horizOnly.lg}
+  padding: 0px 12px;
   ${breakpoints.lg_md} {
     background-color: ${colors.tint.white};
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-  }
-  ${breakpoints.md_sm} {
-    ${pagePadding.horizOnly.sm}
   }
 `
 const left = css`

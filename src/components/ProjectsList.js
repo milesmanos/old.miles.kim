@@ -2,7 +2,7 @@ import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link, StaticQuery } from "gatsby"
 import { text } from "../styles/styleObjects/text"
-import { css, cx } from "linaria"
+import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors"
 import LineHeightSpacer from "../components/structure/LineHeightSpacer"
 import { breakpoints } from "../styles/styleObjects/layout"
@@ -38,23 +38,24 @@ const label = css`
 `
 const desc = css``
 const iotas = css`
+  ${text.complete.sm}
   color: ${colors.content.black.secondary};
 `
-const colorDot = css`
-  position: absolute;
-  left: -16px;
-  width: 8px;
-  height: 8px;
-  border-radius: 99px;
-  background-color: red;
-  top: 12px;
-  ${breakpoints.md_sm} {
-    top: 9px;
-    left: -12px;
-    width: 6px;
-    height: 6px;
-  }
-`
+// const colorDot = css`
+//   position: absolute;
+//   left: -16px;
+//   width: 8px;
+//   height: 8px;
+//   border-radius: 99px;
+//   background-color: red;
+//   top: 12px;
+//   ${breakpoints.md_sm} {
+//     top: 9px;
+//     left: -12px;
+//     width: 6px;
+//     height: 6px;
+//   }
+// `
 const designColor = css`
   color: ${colors.red};
 `
@@ -77,6 +78,7 @@ export default function ProjectsList() {
               frontmatter {
                 title
                 description
+                preview
                 category
                 startDate
                 endDate
@@ -129,8 +131,8 @@ export default function ProjectsList() {
                       <span className={desc}>
                         {project.frontmatter.description}
                       </span>
+                      <i>{project.frontmatter.preview}</i>
                     </div>
-                    {project.frontmatter.preview}
                     <div className={iotas}>
                       {project.frontmatter.category === "design" ? (
                         <span className={designColor}>Design</span>
