@@ -38,6 +38,7 @@ const label = css`
 `
 const desc = css``
 const iotas = css`
+  margin-top: 0.5em;
   ${text.complete.sm}
   color: ${colors.content.black.secondary};
 `
