@@ -58,10 +58,5 @@ const pageWrapper = css`
 `
 
 export default function ProjectLayout({ children }) {
-  return (
-    <div className={pageWrapper}>
-      <Navbar />
-      {children}
-    </div>
-  )
+  return <div className={pageWrapper}>{children}</div>
 }

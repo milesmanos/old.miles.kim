@@ -6,6 +6,7 @@ import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors"
 import LineHeightSpacer from "../components/structure/LineHeightSpacer"
 import { breakpoints } from "../styles/styleObjects/layout"
+// import useScrollPosition from "../hooks/useScrollPosition"
 
 const projectLink = css`
   width: 100%;
@@ -15,9 +16,9 @@ const projectsList = css`
   ${text.complete.md}
   display: flex;
   flex-direction: column;
-  ${breakpoints.md_sm} {
+  /* ${breakpoints.md_sm} {
     ${text.complete.sm}
-  }
+  } */
 `
 const projectImage = css`
   width: 100%;
@@ -36,7 +37,9 @@ const title = css`
 const label = css`
   position: relative;
 `
-const desc = css``
+const preview = css`
+  color: ${colors.content.black.secondary};
+`
 const iotas = css`
   margin-top: 0.5em;
   ${text.complete.sm}
@@ -66,6 +69,7 @@ const artColor = css`
 const writingColor = css`
   color: ${colors.blue};
 `
+// frontmatter: {category: {eq: ""}}},
 
 export default function ProjectsList() {
   return (
@@ -129,9 +133,9 @@ export default function ProjectsList() {
                   <div className={label}>
                     <div>
                       <span className={title}>{project.frontmatter.title}</span>{" "}
-                      <span className={desc}>
-                        {project.frontmatter.description}
-                      </span>
+                      <span>{project.frontmatter.description}</span>
+                    </div>
+                    <div className={preview}>
                       <i>{project.frontmatter.preview}</i>
                     </div>
                     <div className={iotas}>

@@ -4,7 +4,8 @@ description: has been described as a "public diary".
 category: writing
 slug: newsletter
 startDate: Mar 2022
-sortDate: 2022-03-01T00:00:00+00:00
+endDate: — Present
+sortDate: 2022-11-01T00:00:00+00:00
 thumb: ../images/thumbs/writing-newsletter.jpg
 ---
 

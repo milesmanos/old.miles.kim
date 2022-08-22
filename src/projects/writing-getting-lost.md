@@ -1,6 +1,7 @@
 ---
 title: Getting Lost
-preview: — I often find myself around cows, sloping around, looking for a place to be. In a field along the Lost Coast, I awoke to one outside my car window, a large black bull whinnying in distress...
+description: — An essay composed of fragments written on a road trip.
+preview: I often find myself around cows, sloping around, looking for a place to be. In a field along the Lost Coast, I awoke to one outside my car window, a large black bull whinnying in distress...
 category: writing
 subType: essay
 slug: getting-lost
@@ -10,7 +11,7 @@ sortDate: 2021-02-01T00:00:00+00:00
 featuredImg: ../images/art/elk.jpg
 ---
 
-<strong>I often find myself around cows</strong>, sloping around, looking for a place to be.
+I often find myself around cows, sloping around, looking for a place to be.
 
 In a field along the Lost Coast, I awoke to one outside my car window, a large black bull whinnying in distress. He must have stumbled through the fog and come across my car, frightened by the harsh piece of metal. Tight-chested, I crawled into the driver’s seat, left my spot while the stars were still out. I didn’t stop driving, drove through the ranches winding upward. I felt the sun sloping up the opposite hillside.
 

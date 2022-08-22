@@ -7,6 +7,8 @@ import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors.js"
 import { text } from "../styles/styleObjects/text.js"
 import { GatsbyImage } from "gatsby-plugin-image"
+import Slash from "../components/structure/Slash.js"
+import Navbar from "../components/Navbar.js"
 
 // Content styles in ../components/ProjectLayout.js
 const iotas = css`
@@ -14,25 +16,23 @@ const iotas = css`
   color: ${colors.content.black.secondary};
   text-transform: capitalize;
 `
-const slash = css`
-  color: ${colors.content.black.line};
-`
 
 export default function ProjectDetails({ data }) {
   const { html } = data.markdownRemark
-  const { title, place, startDate, subType, featuredImg } =
+  const { title, place, startDate, subType, featuredImg, category } =
     data.markdownRemark.frontmatter
 
   return (
     <ProjectLayout>
+      <Navbar category={category} title={title} />
       <div>
         <h1>{title}</h1>
         <Spacers.Vertical._8px />
         <div className={iotas}>
           {place}
-          <span className={slash}>{" / "}</span>
+          <Slash />
           {startDate}
-          <span className={slash}>{" / "}</span>
+          <Slash />
           {subType}
         </div>
         <LineHeightSpacer isTwoLines />
@@ -58,6 +58,7 @@ export const query = graphql`
       frontmatter {
         description
         title
+        category
         place
         startDate
         subType

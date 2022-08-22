@@ -1,13 +1,14 @@
 ---
-title: Design / Art
-description: — A short essay about two things close to my heart.
-preview: Design and art are both about embodiment. Design is about posture, and art is about gesture. Design is about presentation, art is about what is presented...
-category: writing
-subType: essay
-slug: design-art
-place: Oahu, HI
-startDate: May 2021
-sortDate: 2021-05-01T00:00:00+00:00
+title: iPhone Photos
+description: is a collection of blurry iPhone photos.
+# preview:
+category: art
+subType: photography
+slug: iphone-photos
+# place:
+startDate: Dec 2020
+sortDate: 2022-10-01T00:00:00+00:00
+thumb: ../images/thumbs/art-iphone-photos.jpg
 ---
 
 Design and art are both about embodiment. Design is about _posture_, and art is about _gesture_. Design is about presentation, art is about what is presented.
