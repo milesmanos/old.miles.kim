@@ -37,7 +37,7 @@ const label = css`
   position: relative;
 `
 const desc = css``
-const date = css`
+const iotas = css`
   color: ${colors.content.black.secondary};
 `
 const colorDot = css`
@@ -56,13 +56,13 @@ const colorDot = css`
   }
 `
 const designColor = css`
-  background-color: ${colors.red};
+  color: ${colors.red};
 `
 const artColor = css`
-  background-color: ${colors.green};
+  color: ${colors.green};
 `
 const writingColor = css`
-  background-color: ${colors.blue};
+  color: ${colors.blue};
 `
 
 export default function ProjectsList() {
@@ -124,22 +124,27 @@ export default function ProjectsList() {
                   )}
 
                   <div className={label}>
-                    <span className={title}>{project.frontmatter.title}</span>{" "}
-                    <span className={desc}>
-                      {project.frontmatter.description}
-                    </span>{" "}
-                    <div className={date} style={{ display: "inline-block" }}>
-                      {project.frontmatter.startDate}&nbsp;
-                      {project.frontmatter.endDate}
+                    <div>
+                      <span className={title}>{project.frontmatter.title}</span>{" "}
+                      <span className={desc}>
+                        {project.frontmatter.description}
+                      </span>
                     </div>
-                    <div
-                      className={cx(
-                        colorDot,
-                        project.frontmatter.category === "design"
-                          ? designColor
-                          : writingColor
-                      )}
-                    />
+                    {project.frontmatter.preview}
+                    <div className={iotas}>
+                      {project.frontmatter.category === "design" ? (
+                        <span className={designColor}>Design</span>
+                      ) : project.frontmatter.category === "art" ? (
+                        <span className={artColor}>Art</span>
+                      ) : project.frontmatter.category === "writing" ? (
+                        <span className={writingColor}>Writing</span>
+                      ) : null}
+                      {" / "}
+                      <div style={{ display: "inline-block" }}>
+                        {project.frontmatter.startDate}&nbsp;
+                        {project.frontmatter.endDate}
+                      </div>
+                    </div>
                   </div>
                 </Link>
               </div>

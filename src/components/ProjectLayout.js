@@ -23,6 +23,7 @@ const pageWrapper = css`
   h1 {
     text-transform: uppercase;
     margin-top: 1.5em;
+    margin-bottom: 0px;
     font-size: 48px;
     line-height: 1.5;
     ${breakpoints.md_sm} {

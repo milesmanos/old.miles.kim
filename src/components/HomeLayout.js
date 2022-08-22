@@ -64,19 +64,21 @@ export default function HomeLayout({ children }) {
           <div className={hiddenDragon}>
             <br />
             I’m a bit all over the place as a person and thought I’d build a
-            single-page mishmash of a website in that spirit. I divide what I do
-            into two categories:
+            single-page mishmash of a website in that spirit.
             <br />
             <br />
             1—I’m a <strong>product designer</strong> who takes ideas from 0 to
-            1, defining the user-facing backbone of a product. I’m learning
-            frontend development and built this site from scratch.
+            1, defining the user-facing backbone of a product with visual
+            design, brand strategy, and writing. I’m learning frontend
+            development (enough to build this site).
             <br />
             <br />
-            2—I’m an <strong>artist</strong>. This one’s a bit harder to pin
-            down, but ever since I can remember I’ve been scribbling away,
-            trying to get at something. Lately, writing has been my medium,
-            though it shifts.
+            2—I’m an <strong>artist</strong>. Ever since I can remember I’ve
+            been drawing and painting.
+            <br />
+            <br />
+            3—I’m a <strong>writer</strong>. My work bounces between practical,
+            personal, artistic. Right now it’s my main artistic medium.
             <br />
             <br />I also like to play guitar, surf, and listen to music.
             <br />
