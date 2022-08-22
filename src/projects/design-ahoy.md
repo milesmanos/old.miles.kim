@@ -4,7 +4,7 @@ description: is a platform for bringing ideas to life.
 category: design
 slug: ahoy
 startDate: Jan 2022
-sortDate: 2022-08-01T00:00:00+00:00
+sortDate: 2022-12-01T00:00:00+00:00
 endDate: – Present
 thumb: ../images/thumbs/design-ahoy.jpg
 ---

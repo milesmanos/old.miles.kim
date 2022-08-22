@@ -3,11 +3,13 @@ const baseProps = {
     lg: "32px",
     md: "21px",
     sm: "16px",
+    xs: "13px",
   },
   lineHeight: {
     lg: "48px",
     md: "32px",
     sm: "24px",
+    xs: "16px",
   },
   weight: {
     bold: 700,
@@ -29,6 +31,10 @@ export const text = {
     sm: `
         font-size: ${baseProps.fontSize.sm};
         line-height: ${baseProps.lineHeight.sm};
+    `,
+    xs: `
+        font-size: ${baseProps.fontSize.xs};
+        line-height: ${baseProps.lineHeight.xs};
     `,
   },
 }
