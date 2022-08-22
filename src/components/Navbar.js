@@ -1,40 +1,37 @@
-// import { navigate } from "gatsby"
+import { navigate } from "gatsby"
 import { css } from "linaria"
 import React from "react"
 import { colors } from "../styles/styleObjects/colors"
 import { breakpoints } from "../styles/styleObjects/layout"
-// import TextButton from "./buttons/TextButton"
 import NavTabs from "./NavTabs"
-import Button from "./buttons/Button"
 import { text } from "../styles/styleObjects/text"
+import { MailSvg } from "../icons/MailSvg"
+import { ChevronBackSvg } from "../icons/ChevronBackSvg"
 
 const navLayout = css`
-  display: grid;
-  grid-template-columns: 1fr 800px 1fr;
-  /* display: flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center; */
+  align-items: center;
   gap: 16px;
   position: fixed;
   top: 0px;
   right: 0px;
   left: 0px;
   z-index: 99;
-  background-color: ${colors.tint.white};
-  padding: 12px 24px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid ${colors.tint.lightBlack};
-  box-shadow: 0 0 12px 0 ${colors.tint.lightBlack};
+  height: 48px;
+  padding: 0px 12px;
+  ${breakpoints.lg_md} {
+    background-color: ${colors.tint.white};
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
 `
 const left = css`
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  ${text.complete.md}
 `
 const middle = css`
-  width: 800px;
+  display: none;
+  /* width: 800px; */
   ${breakpoints.lg_md} {
     flex-grow: 1;
   }
@@ -44,21 +41,36 @@ const right = css`
   justify-content: flex-end;
 `
 
+const backButton = css`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  ${text.complete.sm}
+  gap: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  :hover {
+    text-decoration: underline;
+  }
+`
+
 // pass in "projectName" prop for subpages
 
 export default function Navbar() {
   return (
     <div className={navLayout}>
       <div className={left}>
-        <strong>MILES KIM</strong>
+        <button className={backButton} onClick={() => navigate(-1)}>
+          <ChevronBackSvg size={24} />
+          <strong>MILES KIM</strong>
+        </button>
       </div>
       <div className={middle}>
         <NavTabs />
       </div>
       <div className={right}>
-        <Button color="white" size="lg" svgFirst>
-          Connect
-        </Button>
+        <MailSvg size={24} />
       </div>
     </div>
   )
