@@ -7,7 +7,7 @@ const basePadding = {
   horizLg: "24px",
   vertiLg: "96px",
   horizSm: "24px",
-  vertiSm: "48px",
+  vertiSm: "96px",
 }
 
 export const pagePadding = {

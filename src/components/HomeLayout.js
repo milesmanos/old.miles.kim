@@ -5,16 +5,16 @@ import "../styles/normalize.css"
 import { colors } from "../styles/styleObjects/colors"
 import { breakpoints, pagePadding } from "../styles/styleObjects/layout"
 import { text } from "../styles/styleObjects/text"
-import LineHeightSpacer from "./structure/LineHeightSpacer"
 import TextButton from "./buttons/TextButton"
-import NavTabs from "./NavTabs"
 import { StaticImage } from "gatsby-plugin-image"
+import Navbar from "./Navbar"
 
 // Z-INDICES
 // Navbar: 99
 
 // Page Styles
 const pageWrapper = css`
+  ${text.complete.md}
   color: ${colors.content.black.primary};
   margin-left: auto;
   margin-right: auto;
@@ -22,15 +22,18 @@ const pageWrapper = css`
   ${pagePadding.complete.lg}
   ${breakpoints.md_sm} {
     ${pagePadding.complete.sm}
+    ${text.complete.mobText}
   }
 `
 const headerSty = css`
-  ${text.complete.lg}
-  ${breakpoints.md_sm} {
-    ${text.complete.md};
-  }
   span {
     font-weight: ${text.weight.bold};
+  }
+`
+const mk = css`
+  ${text.complete.xxl}
+  ${breakpoints.md_sm} {
+    ${text.complete.xl}
   }
 `
 const hiddenDragon = css`
@@ -47,19 +50,20 @@ export default function HomeLayout({ children }) {
 
   return (
     <div className={pageWrapper}>
-      {/* <Navbar /> */}
+      <Navbar />
       <header className={headerSty}>
-        <strong>MILES KIM</strong>
-        <LineHeightSpacer />^{" "}
-        <span style={{ color: colors.red }}> Designer</span>,
-        <span style={{ color: colors.green }}> artist</span>, &{" "}
-        <span style={{ color: colors.blue }}> writer</span> in San Francisco.{" "}
-        <TextButton
-          onClick={() => setShowAbout(!showAbout)}
-          color="blackSecondary"
-        >
-          {!showAbout ? "(...)" : "(hide)"}
-        </TextButton>
+        <strong className={mk}>Miles Kim</strong>
+        <div>
+          ^<span style={{ color: colors.red }}> Designer</span>,
+          <span style={{ color: colors.green }}> artist</span>, &{" "}
+          <span style={{ color: colors.blue }}> writer</span> in San Francisco.{" "}
+          <TextButton
+            onClick={() => setShowAbout(!showAbout)}
+            color="blackSecondary"
+          >
+            {!showAbout ? "(...)" : "(hide)"}
+          </TextButton>
+        </div>
         {showAbout && (
           <div className={hiddenDragon}>
             <br />
@@ -92,7 +96,7 @@ export default function HomeLayout({ children }) {
               src="../images/profile.jpg"
               alt="me"
               className={profile}
-              width={192}
+              width={128}
               aspectRatio={1}
             />
             <br />
@@ -105,11 +109,7 @@ export default function HomeLayout({ children }) {
             </TextButton>
           </div>
         )}
-        <LineHeightSpacer isTwoLines />
       </header>
-
-      {/* Tabs */}
-      <NavTabs />
       {children}
     </div>
   )

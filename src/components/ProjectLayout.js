@@ -3,23 +3,18 @@ import React from "react"
 import "../styles/global.css"
 import "../styles/normalize.css"
 import { colors } from "../styles/styleObjects/colors"
-import { breakpoints, pagePadding } from "../styles/styleObjects/layout"
+import { breakpoints } from "../styles/styleObjects/layout"
 import { text } from "../styles/styleObjects/text"
 
 const pageWrapper = css`
+  margin-top: 48px;
+  position: relative;
   ${text.complete.md};
   color: ${colors.content.black.primary};
   margin-left: auto;
   margin-right: auto;
-  max-width: 720px;
-  ${pagePadding.complete.lg};
-  ${breakpoints.md_sm} {
-    ${pagePadding.complete.sm};
-    ${text.complete.sm};
-  }
 
   h1 {
-    text-transform: uppercase;
     margin-top: 1.5em;
     margin-bottom: 0px;
     font-size: 48px;

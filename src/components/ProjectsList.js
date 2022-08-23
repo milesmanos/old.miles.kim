@@ -15,9 +15,9 @@ const projectsList = css`
   ${text.complete.md}
   display: flex;
   flex-direction: column;
-  /* ${breakpoints.md_sm} {
-    ${text.complete.sm}
-  } */
+  ${breakpoints.md_sm} {
+    ${text.complete.mobText}
+  }
 `
 const projectImage = css`
   width: 100%;
@@ -27,7 +27,6 @@ const projectImage = css`
   }
 `
 const title = css`
-  text-transform: uppercase;
   font-weight: ${text.weight.bold};
   :hover {
     box-shadow: inset 0 -1px 0 0 ${colors.content.black.primary};
