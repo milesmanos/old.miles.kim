@@ -1,12 +1,10 @@
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 import { css } from "linaria"
 import React from "react"
 import { colors } from "../styles/styleObjects/colors"
 import { breakpoints, pagePadding } from "../styles/styleObjects/layout"
-import NavTabs from "./NavTabs"
 import { text } from "../styles/styleObjects/text"
 import { MailSvg } from "../icons/MailSvg"
-import { ChevronBackSvg } from "../icons/ChevronBackSvg"
 import Slash from "./structure/Slash"
 
 const navLayout = css`
@@ -78,11 +76,20 @@ export default function Navbar({ category, title }) {
   return (
     <div className={navLayout}>
       <div className={left}>
-        <Link className={linkButton} to="/">
-          <span>
-            <strong>MILES KIM</strong>
-          </span>
-        </Link>
+        {sessionStorage.getItem("@@scroll|/|initial") ? (
+          <button className={linkButton} onClick={() => navigate(-1)}>
+            <span>
+              <strong>MILES KIM</strong>
+            </span>
+          </button>
+        ) : (
+          <Link className={linkButton} to="/">
+            <span>
+              <strong>MILES KIM</strong>
+            </span>
+          </Link>
+        )}
+
         {category && (
           <>
             <Slash />

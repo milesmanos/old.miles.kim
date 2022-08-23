@@ -6,7 +6,6 @@ import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors"
 import LineHeightSpacer from "../components/structure/LineHeightSpacer"
 import { breakpoints } from "../styles/styleObjects/layout"
-// import useScrollPosition from "../hooks/useScrollPosition"
 
 const projectLink = css`
   width: 100%;
@@ -45,21 +44,6 @@ const iotas = css`
   ${text.complete.sm}
   color: ${colors.content.black.secondary};
 `
-// const colorDot = css`
-//   position: absolute;
-//   left: -16px;
-//   width: 8px;
-//   height: 8px;
-//   border-radius: 99px;
-//   background-color: red;
-//   top: 12px;
-//   ${breakpoints.md_sm} {
-//     top: 9px;
-//     left: -12px;
-//     width: 6px;
-//     height: 6px;
-//   }
-// `
 const designColor = css`
   color: ${colors.red};
 `
@@ -69,7 +53,6 @@ const artColor = css`
 const writingColor = css`
   color: ${colors.blue};
 `
-// frontmatter: {category: {eq: ""}}},
 
 export default function ProjectsList() {
   return (
