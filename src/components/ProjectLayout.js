@@ -3,11 +3,12 @@ import React from "react"
 import "../styles/global.css"
 import "../styles/normalize.css"
 import { colors } from "../styles/styleObjects/colors"
-import { breakpoints } from "../styles/styleObjects/layout"
+import { breakpoints, pagePadding } from "../styles/styleObjects/layout"
 import { text } from "../styles/styleObjects/text"
+import Navbar from "./Navbar"
 
 const pageWrapper = css`
-  margin-top: 48px;
+  margin-top: 64px;
   position: relative;
   ${text.complete.md};
   color: ${colors.content.black.primary};
@@ -50,6 +51,25 @@ const pageWrapper = css`
   }
 `
 
+const overlaySheet = css`
+  background-color: white;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.05);
+  border-top: solid 1px var(--content-black-line);
+  ${pagePadding.complete.lg};
+  ${breakpoints.md_sm} {
+    ${pagePadding.complete.sm};
+    ${text.complete.sm};
+  }
+`
+
 export default function ProjectLayout({ children }) {
-  return <div className={pageWrapper}>{children}</div>
+  return (
+    <div className={pageWrapper}>
+      <Navbar receding />
+      <div className={overlaySheet}>{children}</div>
+    </div>
+  )
 }

@@ -8,22 +8,13 @@ import { colors } from "../styles/styleObjects/colors.js"
 import { text } from "../styles/styleObjects/text.js"
 import { GatsbyImage } from "gatsby-plugin-image"
 import Slash from "../components/structure/Slash.js"
-import Navbar from "../components/Navbar.js"
-import { breakpoints, pagePadding } from "../styles/styleObjects/layout.js"
 
 // Content styles in ../components/ProjectLayout.js
 const mainContent = css`
-  background-color: white;
-  position: absolute;
-  z-index: 99;
-  width: 100%;
-  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.05);
-  border-top: solid 1px var(--content-black-line);
-  ${pagePadding.complete.lg};
-  ${breakpoints.md_sm} {
-    ${pagePadding.complete.sm};
-    ${text.complete.sm};
-  }
+  position: relative;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 `
 const iotas = css`
   ${text.complete.sm}
@@ -31,6 +22,7 @@ const iotas = css`
   text-transform: capitalize;
 `
 const linkButton = css`
+  position: sticky;
   color: ${colors.content.black.secondary};
   display: flex;
   justify-content: flex-start;
@@ -51,7 +43,6 @@ export default function ProjectDetails({ data }) {
 
   return (
     <ProjectLayout>
-      <Navbar receding />
       <div className={mainContent}>
         {sessionStorage.getItem("@@scroll|/|initial") ? (
           <button className={linkButton} onClick={() => navigate(-1)}>
