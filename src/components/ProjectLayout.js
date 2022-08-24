@@ -1,4 +1,3 @@
-// import { navigate } from "gatsby"
 import { css } from "linaria"
 import React from "react"
 import "../styles/global.css"
@@ -9,19 +8,14 @@ import { text } from "../styles/styleObjects/text"
 import Navbar from "./Navbar"
 
 const pageWrapper = css`
+  margin-top: 64px;
+  position: relative;
   ${text.complete.md};
   color: ${colors.content.black.primary};
   margin-left: auto;
   margin-right: auto;
-  max-width: 720px;
-  ${pagePadding.complete.lg};
-  ${breakpoints.md_sm} {
-    ${pagePadding.complete.sm};
-    ${text.complete.sm};
-  }
 
   h1 {
-    text-transform: uppercase;
     margin-top: 1.5em;
     margin-bottom: 0px;
     font-size: 48px;
@@ -57,6 +51,25 @@ const pageWrapper = css`
   }
 `
 
+const overlaySheet = css`
+  background-color: white;
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.05);
+  border-top: solid 1px var(--content-black-line);
+  ${pagePadding.complete.lg};
+  ${breakpoints.md_sm} {
+    ${pagePadding.complete.sm};
+    ${text.complete.sm};
+  }
+`
+
 export default function ProjectLayout({ children }) {
-  return <div className={pageWrapper}>{children}</div>
+  return (
+    <div className={pageWrapper}>
+      <Navbar receding />
+      <div className={overlaySheet}>{children}</div>
+    </div>
+  )
 }

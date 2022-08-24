@@ -3,16 +3,21 @@ import { css } from "linaria"
 import React from "react"
 import { colors } from "../styles/styleObjects/colors"
 import { breakpoints } from "../styles/styleObjects/layout"
+import { text } from "../styles/styleObjects/text"
 
 // Nav styles
 const navTabs = css`
+  ${text.complete.sm}
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  box-shadow: inset 0px 0px 2px 0px ${colors.tint.lightBlack};
   border-radius: 99px;
   background-color: ${colors.tint.lightBlack};
+  overflow: hidden;
+  padding: 2px;
 `
 const navLink = css`
   display: flex;
@@ -21,18 +26,16 @@ const navLink = css`
   color: ${colors.content.black.secondary};
   border-radius: 99px;
   cursor: pointer;
-  height: 48px;
+  height: 32px;
   :hover {
     color: ${colors.content.black.primary};
   }
-  ${breakpoints.md_sm} {
-    height: 36px;
-  }
 `
 const active = css`
-  color: ${colors.content.white.primary};
-  background-color: ${colors.tint.black};
+  color: ${colors.content.black.primary};
+  background-color: ${colors.tint.white};
   pointer-events: none;
+  box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.14);
 `
 
 export default function NavTabs() {
