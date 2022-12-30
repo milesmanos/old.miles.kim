@@ -2,7 +2,6 @@ import { Link } from "gatsby"
 import { css } from "linaria"
 import React from "react"
 import { colors } from "../styles/styleObjects/colors"
-import { breakpoints } from "../styles/styleObjects/layout"
 import { text } from "../styles/styleObjects/text"
 
 // Nav styles
