@@ -3,7 +3,7 @@ import { css, cx } from "linaria"
 import React from "react"
 import { colors } from "../styles/styleObjects/colors"
 import { text } from "../styles/styleObjects/text"
-import Button from "./buttons/Button"
+import Button from "./Button"
 
 const navLayout = css`
   ${text.complete.sm}

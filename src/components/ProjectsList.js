@@ -3,7 +3,6 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link, StaticQuery } from "gatsby"
 import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors"
-import LineHeightSpacer from "../components/structure/LineHeightSpacer"
 
 const projectLink = css`
   width: 100%;
@@ -75,7 +74,6 @@ export default function ProjectsList() {
           <div className={projectsList}>
             {projects.map(project => (
               <div key={project.id}>
-                <LineHeightSpacer isTwoLines />
                 <Link
                   className={projectLink}
                   to={"/projects/" + project.frontmatter.slug}
@@ -90,7 +88,6 @@ export default function ProjectsList() {
                         alt={project.frontmatter.title}
                         className={projectImage}
                       />
-                      <LineHeightSpacer isEm />
                     </>
                   )}
 

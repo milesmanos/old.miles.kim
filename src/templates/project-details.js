@@ -1,13 +1,11 @@
 import React from "react"
 import ProjectLayout from "../components/ProjectLayout.js"
 import { graphql, Link, navigate } from "gatsby"
-import LineHeightSpacer from "../components/structure/LineHeightSpacer.js"
 import { Spacers } from "../styles/styleObjects/spacers.js"
 import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors.js"
 import { text } from "../styles/styleObjects/text.js"
 import { GatsbyImage } from "gatsby-plugin-image"
-import Slash from "../components/structure/Slash.js"
 
 // Content styles in ../components/ProjectLayout.js
 
@@ -34,19 +32,15 @@ export default function ProjectDetails({ data }) {
         <Spacers.Vertical._8px />
         <div className={iotas}>
           {place}
-          <Slash />
           {startDate}
-          <Slash />
           {subType}
         </div>
-        <LineHeightSpacer isTwoLines />
         {featuredImg && (
           <>
             <GatsbyImage
               image={featuredImg.childImageSharp.gatsbyImageData}
               alt={title}
             />
-            <LineHeightSpacer isTwoLines />
           </>
         )}
         <div dangerouslySetInnerHTML={{ __html: html }} />

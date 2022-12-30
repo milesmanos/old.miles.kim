@@ -1,7 +1,7 @@
 import { css, cx } from "linaria"
 import React from "react"
-import { colors } from "../../styles/styleObjects/colors"
-import { text } from "../../styles/styleObjects/text"
+import { colors } from "../styles/styleObjects/colors"
+import { text } from "../styles/styleObjects/text"
 
 const buttonSty = css`
   ${text.complete.sm};
