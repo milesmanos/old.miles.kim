@@ -2,11 +2,14 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { css, cx } from "linaria"
 import React, { useState } from "react"
-import { XSVG } from "../icons/XSVG"
+import { CloseSVG } from "../icons/CloseSVG"
+import { ExternalLinkSVG } from "../icons/ExternalLinkSVG"
 import { colors } from "../styles/styleObjects/colors"
 import { breakpoint } from "../styles/styleObjects/layout"
 import { text } from "../styles/styleObjects/text"
 import Button from "./Button"
+import { CopySVG } from "../icons/CopySVG"
+import { CheckSVG } from "../icons/CheckSVG"
 
 const navLayout = css`
   ${text.complete.sm}
@@ -95,12 +98,28 @@ const infoText = css`
   flex-direction: column;
   gap: 24px;
 `
+const buttonGroup = css`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: ${colors.black.secondary};
+  div.buttonRow {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+  }
+  div.label {
+    width: 40px;
+    flex-shrink: 0;
+  }
+`
 const profPic = css`
   border-radius: 2px;
 `
 
 export default function Header({ isClear }) {
   const [showInfo, setShowInfo] = useState(false)
+  const [copiedText, setCopiedText] = useState("")
 
   return (
     <div className={cx(navLayout, isClear && clear)}>
@@ -148,6 +167,52 @@ export default function Header({ isClear }) {
                     Is working at Ahoy Labs.
                   </div>
                 </div>
+                <div className={buttonGroup}>
+                  <div className="buttonRow">
+                    <div className="label">email</div>
+                    <Button
+                      isFullWidth
+                      onClick={() => {
+                        setCopiedText("i@miles.kim")
+                        navigator.clipboard.writeText("i@miles.kim")
+                        setTimeout(() => {
+                          setCopiedText("")
+                        }, 2000)
+                      }}
+                      isDisabled={copiedText === "i@miles.kim"}
+                    >
+                      <div className="text">
+                        {copiedText === "i@miles.kim"
+                          ? "Copied – can’t wait!"
+                          : "i@miles.kim"}
+                      </div>
+                      <div className="icon">
+                        {copiedText === "i@miles.kim" ? (
+                          <CheckSVG size={16} />
+                        ) : (
+                          <CopySVG size={16} />
+                        )}
+                      </div>
+                    </Button>
+                  </div>
+                  <div className="buttonRow">
+                    <div className="label">read</div>
+                    <a
+                      href="https://mileskim.substack.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{ width: "100%" }}
+                    >
+                      <Button isFullWidth>
+                        <div className="text">mileskim.substack.com</div>
+                        <div className="icon">
+                          <ExternalLinkSVG size={16} />
+                        </div>
+                      </Button>
+                    </a>
+                  </div>
+                </div>
+
                 <StaticImage
                   src="../images/square-prof-pic.jpg"
                   alt="Me"
@@ -157,7 +222,7 @@ export default function Header({ isClear }) {
                 <Button isFullWidth onClick={() => setShowInfo(false)}>
                   <div className="text">Close</div>
                   <div className="icon">
-                    <XSVG size={16} />
+                    <CloseSVG size={16} />
                   </div>
                 </Button>
               </div>
@@ -165,7 +230,9 @@ export default function Header({ isClear }) {
             <button
               className={clickOutToClose}
               onClick={() => setShowInfo(!showInfo)}
-            />
+            >
+              {" "}
+            </button>
           </div>
         </>
       )}

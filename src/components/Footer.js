@@ -8,13 +8,15 @@ const navLayout = css`
   width: 100%;
   padding: 16px 24px;
   color: ${colors.black.barely};
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
 `
 
 const Footer = () => {
   return (
     <div className={navLayout}>
       <div>Designed and built by Miles Kim</div>
+      <div>i@miles.kim</div>
     </div>
   )
 }

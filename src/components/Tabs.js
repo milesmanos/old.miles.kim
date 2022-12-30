@@ -20,7 +20,11 @@ const link = css`
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  border-radius: 10px;
+  border-radius: 99px;
+  :hover {
+    color: ${colors.black.primary};
+  }
+
   div.ellipse {
     border-radius: 99px;
     width: 8px;
@@ -39,25 +43,84 @@ const link = css`
 
 const redLink = css`
   :hover {
-    background-color: ${colors.bg.light};
     color: ${colors.red};
   }
   :active {
     background-color: ${colors.red};
     color: white;
-    border: none;
-    box-shadow: 0 1px 4px 0 ${colors.line.dark};
+    border: 1px solid ${colors.red};
+    div.ellipse {
+      background-color: white;
+    }
+    /* Match class activeDesign */
   }
 `
-const greenLink = css``
-const blueLink = css``
+const greenLink = css`
+  :hover {
+    color: ${colors.green};
+  }
+  :active {
+    background-color: ${colors.green};
+    color: white;
+    border: 1px solid ${colors.green};
+    div.ellipse {
+      background-color: white;
+    }
+    /* Match class activeArt */
+  }
+`
+const blueLink = css`
+  :hover {
+    color: ${colors.blue};
+  }
+  :active {
+    background-color: ${colors.blue};
+    color: white;
+    border: 1px solid ${colors.blue};
+    div.ellipse {
+      background-color: white;
+    }
+    /* Match class activeWriting */
+  }
+`
 
 // active classes
-const activeAll = css`
-  border: none;
+const activeAny = css`
+  :hover {
+    color: white;
+  }
+`
+const activeFeatured = css`
+  border: 1px solid ${colors.black.darkest};
   background-color: ${colors.black.darkest};
   color: white;
-  box-shadow: 0 1px 4px 0 ${colors.line.dark};
+  div.ellipse {
+    background-color: white;
+  }
+`
+const activeDesign = css`
+  background-color: ${colors.red};
+  color: white;
+  border: 1px solid ${colors.red};
+  div.ellipse {
+    background-color: white;
+  }
+`
+const activeArt = css`
+  background-color: ${colors.green};
+  color: white;
+  border: 1px solid ${colors.green};
+  div.ellipse {
+    background-color: white;
+  }
+`
+const activeWriting = css`
+  background-color: ${colors.blue};
+  color: white;
+  border: 1px solid ${colors.blue};
+  div.ellipse {
+    background-color: white;
+  }
 `
 
 const AllProjectsSVG = () => (
@@ -80,19 +143,35 @@ const AllProjectsSVG = () => (
 export default function Tabs() {
   return (
     <div className={row}>
-      <Link activeClassName={activeAll} className={link} to="/">
-        Selected
+      <Link
+        activeClassName={cx(activeAny, activeFeatured)}
+        className={link}
+        to="/"
+      >
+        Featured
         <AllProjectsSVG />
       </Link>
-      <Link className={cx(link, redLink)}>
+      <Link
+        activeClassName={cx(activeAny, activeDesign)}
+        className={cx(link, redLink)}
+        to="/design/"
+      >
         Design
         <div className={cx("ellipse", "red")} />
       </Link>
-      <Link className={cx(link, greenLink)}>
+      <Link
+        activeClassName={cx(activeAny, activeArt)}
+        className={cx(link, greenLink)}
+        to="/art/"
+      >
         Art
         <div className={cx("ellipse", "green")} />
       </Link>
-      <Link className={cx(link, blueLink)}>
+      <Link
+        activeClassName={cx(activeAny, activeWriting)}
+        className={cx(link, blueLink)}
+        to="/writing/"
+      >
         Writing
         <div className={cx("ellipse", "blue")} />
       </Link>

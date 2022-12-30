@@ -15,7 +15,7 @@ startDate: Nov 2022
 # endDate:
 sortDate: 2022-11-01T00:00:00+00:00
 
-# slug:
+slug: footsteps
 url: https://mileskim.substack.com/p/footsteps
 # featuredImg:
 ---

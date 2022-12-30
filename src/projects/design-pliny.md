@@ -15,7 +15,7 @@ startDate: Dec 2022
 endDate: – Present
 sortDate: 2022-12-01T00:00:00+00:00
 
-# slug: pliny
+slug: pliny
 url: https://pliny.app/
 featuredImg: ../images/thumbs/design-pliny.jpg
 ---

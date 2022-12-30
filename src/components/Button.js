@@ -75,6 +75,7 @@ export default function Button({
   isDark,
   isFullWidth,
   isNoUnderline,
+  isDisabled,
   onClick,
 }) {
   return (
@@ -85,6 +86,7 @@ export default function Button({
         isFullWidth && fullWidth,
         isNoUnderline && noUnderline
       )}
+      disabled={isDisabled}
       onClick={onClick}
     >
       {children}

@@ -1,13 +1,5 @@
 ---
 title: Westwave Capital
-description: Website. A deep tech investment firm.
-category: design
-slug: westwave
-startDate: Apr 2021
-sortDate: 2021-04-01T00:00:00+00:00
-thumb: ../images/thumbs/design-westwave.jpg
-
-title: Westwave Capital
 thumb: ../images/thumbs/design-westwave.jpg
 # preview:
 featured: n
@@ -24,7 +16,7 @@ startDate: Apr 2021
 sortDate: 2021-04-01T00:00:00+00:00
 
 slug: westwave-capital
-# url:
+url: https://www.westwavecapital.com/
 # featuredImg:
 ---
 

@@ -1,6 +1,6 @@
 import React from "react"
 
-export function XSVG({ size }) {
+export function CloseSVG({ size }) {
   return (
     <svg viewBox="0 0 16 16" height={size} width={size}>
       <path
