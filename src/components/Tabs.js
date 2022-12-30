@@ -5,7 +5,7 @@ import { colors } from "../styles/styleObjects/colors"
 import { text } from "../styles/styleObjects/text"
 
 // Nav styles
-const navTabs = css`
+const tabs = css`
   ${text.complete.sm}
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -37,9 +37,9 @@ const active = css`
   box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.14);
 `
 
-export default function NavTabs() {
+export default function Tabs() {
   return (
-    <nav className={navTabs}>
+    <nav className={tabs}>
       <Link activeClassName={active} className={navLink} to="/">
         All
       </Link>
