@@ -1,6 +1,6 @@
 import { StaticImage } from "gatsby-plugin-image"
 import { css } from "linaria"
-import React, { useState } from "react"
+import React from "react"
 import Navbar from "../components/Navbar"
 import ProjectsList from "../components/ProjectsList"
 import { colors } from "../styles/styleObjects/colors"
@@ -102,10 +102,9 @@ const miles = css`
 `
 
 export default function Home() {
-  const [showInfo, setShowInfo] = useState(false)
   return (
     <div className={pageWrapper}>
-      <Navbar onClick={() => setShowInfo(!showInfo)} />
+      <Navbar />
       <StaticImage
         src="../images/art/electrode.jpg"
         alt="Electrode — Painting"
@@ -115,61 +114,6 @@ export default function Home() {
       <div className={mainBody}>
         <ProjectsList />
       </div>
-      {showInfo && (
-        <>
-          <div className={infoOverlay}>
-            <div className={infoBox}>
-              <div className={mockNav}>
-                <div className={flexGrow}>
-                  <Link to="/" className={miles}>
-                    Miles Kim
-                  </Link>
-                </div>
-                <Button onClick={() => setShowInfo(false)}>
-                  <div className="text">Close</div>
-                </Button>
-              </div>
-              <div className={infoContent}>
-                <div className={infoText}>
-                  <div>
-                    ... designs interfaces, lives in San Francisco, writes
-                    often, paints sometimes. Loves music, surfing, hiking, and
-                    nature docs.
-                  </div>
-                  <div>
-                    Graduated Yale class of 2020 with a B.A. in studio art. Has
-                    worked as a designer and (sometimes) frontend developer for
-                    startups over the past years.
-                  </div>
-                  <div>
-                    <div style={{ textDecoration: "line-through" }}>
-                      Is always looking for new ways to think and create, is
-                      itching for new projects.
-                    </div>
-                    Is working at Ahoy Labs.
-                  </div>
-                </div>
-                <StaticImage
-                  src="../images/square-prof-pic.jpg"
-                  alt="Me"
-                  aspectRatio={1 / 1}
-                  className={profPic}
-                />
-                <Button isFullWidth onClick={() => setShowInfo(false)}>
-                  <div className="text">Close</div>
-                  <div className="icon">
-                    <XIcon size={16} />
-                  </div>
-                </Button>
-              </div>
-            </div>
-            <button
-              className={clickOutToClose}
-              onClick={() => setShowInfo(!showInfo)}
-            />
-          </div>
-        </>
-      )}
     </div>
   )
 }
