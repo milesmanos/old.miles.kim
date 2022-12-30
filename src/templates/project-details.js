@@ -10,40 +10,16 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import Slash from "../components/structure/Slash.js"
 
 // Content styles in ../components/ProjectLayout.js
-const mainContent = css`
-  position: relative;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-`
-const iotas = css`
-  ${text.complete.sm}
-  color: ${colors.content.black.secondary};
-  text-transform: capitalize;
-`
-const linkButton = css`
-  position: sticky;
-  color: ${colors.content.black.secondary};
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  :hover {
-    color: ${colors.content.black.primary};
-  }
-`
 
 export default function ProjectDetails({ data }) {
-  const { html } = data.markdownRemark
-  const { title, place, startDate, subType, featuredImg } =
-    data.markdownRemark.frontmatter
+  // const { html } = data.markdownRemark
+  // const { title, place, startDate, subType, featuredImg } =
+  //   data.markdownRemark.frontmatter
 
   return (
     <ProjectLayout>
-      <div className={mainContent}>
+      children
+      {/* <div className={mainContent}>
         {sessionStorage.getItem("@@scroll|/|initial") ? (
           <button className={linkButton} onClick={() => navigate(-1)}>
             <span>x</span>
@@ -74,28 +50,28 @@ export default function ProjectDetails({ data }) {
           </>
         )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
+      </div> */}
     </ProjectLayout>
   )
 }
 
-export const query = graphql`
-  query ProjectDetails($slug: String) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
-      html
-      frontmatter {
-        description
-        title
-        category
-        place
-        startDate
-        subType
-        featuredImg {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query ProjectDetails($slug: String) {
+//     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+//       html
+//       frontmatter {
+//         description
+//         title
+//         category
+//         place
+//         startDate
+//         subType
+//         featuredImg {
+//           childImageSharp {
+//             gatsbyImageData(layout: CONSTRAINED)
+//           }
+//         }
+//       }
+//     }
+//   }
+// `

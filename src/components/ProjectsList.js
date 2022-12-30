@@ -1,23 +1,16 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link, StaticQuery } from "gatsby"
-import { text } from "../styles/styleObjects/text"
 import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors"
 import LineHeightSpacer from "../components/structure/LineHeightSpacer"
-import { breakpoints } from "../styles/styleObjects/layout"
 
 const projectLink = css`
   width: 100%;
-  color: ${colors.content.black.primary};
 `
 const projectsList = css`
-  ${text.complete.md}
   display: flex;
   flex-direction: column;
-  ${breakpoints.md_sm} {
-    ${text.complete.mobText}
-  }
 `
 const projectImage = css`
   width: 100%;
@@ -27,7 +20,6 @@ const projectImage = css`
   }
 `
 const title = css`
-  font-weight: ${text.weight.bold};
   :hover {
     box-shadow: inset 0 -1px 0 0 ${colors.content.black.primary};
   }
@@ -35,23 +27,13 @@ const title = css`
 const label = css`
   position: relative;
 `
-const preview = css`
-  color: ${colors.content.black.secondary};
-`
+const preview = css``
 const iotas = css`
   margin-top: 0.5em;
-  ${text.complete.sm}
-  color: ${colors.content.black.secondary};
 `
-const designColor = css`
-  color: ${colors.red};
-`
-const artColor = css`
-  color: ${colors.green};
-`
-const writingColor = css`
-  color: ${colors.blue};
-`
+const designColor = css``
+const artColor = css``
+const writingColor = css``
 
 export default function ProjectsList() {
   return (

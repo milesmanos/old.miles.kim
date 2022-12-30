@@ -1,4 +1,5 @@
 export const colors = {
+  // ASS
   content: {
     black: {
       primary: "rgba(0, 0, 0, 0.91)",
@@ -19,11 +20,24 @@ export const colors = {
     white: "rgba(255, 255, 255, 0.91)",
     lightWhite: "rgba(255, 255, 255, 0.03)",
   },
-  bg: {
-    black: "rgba(0, 0, 0)",
-    white: "rgba(255, 255, 255)",
+  // NOT ASS
+  white: "#ffffff",
+  black: {
+    primary: "#46474e",
+    secondary: "#8c8c90",
+    darkest: "#131313",
+    barely: "#cccccc",
   },
-  red: "#f00",
-  blue: "#33ff",
-  green: "#008000",
+  bg: {
+    dark: "#f3f3f3",
+    light: "#fafafa",
+  },
+  line: {
+    dark: "#d1d1d3",
+    light: "#e8e8e8",
+    white: "#494949",
+  },
+  green: "#009d00",
+  red: "#ff2828",
+  blue: "#3333ff",
 }
