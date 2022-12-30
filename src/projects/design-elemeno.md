@@ -1,6 +1,6 @@
 ---
 title: Elemeno
-description: is a lightweight machine learning tool.
+description: Landing page. A lightweight machine learning tool.
 category: design
 slug: elemeno
 startDate: Nov 2020

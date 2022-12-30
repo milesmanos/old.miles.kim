@@ -6,7 +6,7 @@ import { text } from "../styles/styleObjects/text"
 const buttonSty = css`
   ${text.complete.sm};
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   border-bottom: 1px solid ${colors.line.light};
   margin-bottom: -1px;
@@ -14,6 +14,7 @@ const buttonSty = css`
   cursor: pointer;
   div.text {
     display: flex;
+    flex-grow: 1;
     color: ${colors.black.darkest};
   }
   div.icon {
@@ -37,6 +38,7 @@ const buttonSty = css`
   }
 `
 
+// Options
 const dark = css`
   border-bottom: 1px solid #494949;
   div.text {
@@ -52,16 +54,37 @@ const dark = css`
     }
   }
 `
-
 const fullWidth = css`
   justify-content: space-between;
   width: 100%;
 `
+const noUnderline = css`
+  border: none;
+  color: inherit;
+  :hover {
+    border: none;
+    color: inherit;
+  }
+  :active {
+    border: none;
+  }
+`
 
-export default function Button({ children, isDark, isFullWidth, onClick }) {
+export default function Button({
+  children,
+  isDark,
+  isFullWidth,
+  isNoUnderline,
+  onClick,
+}) {
   return (
     <button
-      className={cx(buttonSty, isDark && dark, isFullWidth && fullWidth)}
+      className={cx(
+        buttonSty,
+        isDark && dark,
+        isFullWidth && fullWidth,
+        isNoUnderline && noUnderline
+      )}
       onClick={onClick}
     >
       {children}

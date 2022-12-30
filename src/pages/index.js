@@ -7,7 +7,7 @@ import { colors } from "../styles/styleObjects/colors"
 import { breakpoint } from "../styles/styleObjects/layout"
 import { XIcon } from "../icons/XIcon"
 import { Link } from "gatsby"
-import Button from "../components/buttons/Button"
+import Button from "../components/Button"
 
 // Hello again Miles! File Structure:
 // - Home: index.js
@@ -27,7 +27,7 @@ const hero = css`
 
 const mainBody = css`
   max-width: 1000px;
-  padding: 24px;
+  padding: 48px 24px;
 `
 
 // info box
@@ -73,6 +73,9 @@ const infoText = css`
 `
 const profPic = css`
   border-radius: 2px;
+  img {
+    border-radius: 2px;
+  }
 `
 
 // mocknav

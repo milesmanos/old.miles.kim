@@ -1,11 +1,11 @@
 ---
 title: Ahoy
-description: is a platform for bringing ideas to life.
+description: Digital Product. A platform for bringing ideas to life.
 category: design
 slug: ahoy
-startDate: Jan 2022
+startDate: Jan
 sortDate: 2022-12-01T00:00:00+00:00
-endDate: – Present
+endDate: – Aug 2022
 thumb: ../images/thumbs/design-ahoy.jpg
 ---
 

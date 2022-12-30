@@ -1,38 +1,99 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, Link, StaticQuery } from "gatsby"
-import { css } from "linaria"
+import { css, cx } from "linaria"
 import { colors } from "../styles/styleObjects/colors"
+import { OpenIcon } from "../icons/OpenIcon"
+import { text } from "../styles/styleObjects/text"
+import { breakpoint } from "../styles/styleObjects/layout"
+import Tabs from "./Tabs"
 
-const projectLink = css`
-  width: 100%;
-`
 const projectsList = css`
   display: flex;
   flex-direction: column;
+  align-items: stretch;
+  gap: 72px;
 `
-const projectImage = css`
+
+const projectLink = css`
   width: 100%;
-  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 8px;
+  border: none;
+  border-top: 1px solid ${colors.line.light};
+  margin-top: -1px;
+  div.inherit {
+    color: ${colors.black.secondary};
+  }
+  div.icon {
+    display: flex;
+    justify-content: flex-end;
+    color: ${colors.line.dark};
+  }
+  :hover {
+    color: ${colors.black.darkest};
+    border: none;
+    border-top: 1px solid ${colors.line.dark};
+    div.inherit {
+      color: ${colors.black.primary};
+    }
+    div.icon {
+      color: ${colors.black.barely};
+    }
+  }
+  :active {
+    color: ${colors.black.secondary};
+    border: none;
+    border-top: 1px solid ${colors.line.light};
+    div.inherit {
+      color: ${colors.black.secondary};
+    }
+    div.icon {
+      color: ${colors.line.dark};
+    }
+  }
+`
+
+const projectContent = css`
+  color: ${colors.black.primary};
+  display: flex;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px 0 ${colors.line.dark};
   img {
-    border-radius: 12px;
+    border-radius: 2px;
   }
 `
 const title = css`
-  :hover {
-    box-shadow: inset 0 -1px 0 0 ${colors.content.black.primary};
+  ${text.complete.md};
+  color: ${colors.black.darkest};
+  font-weight: 500;
+`
+const theRest = css`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 48px;
+  ${breakpoint} {
+    flex-direction: column;
+    gap: 24px;
   }
 `
+
 const label = css`
-  position: relative;
+  margin-top: 5px;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  width: 225px;
+  flex-shrink: 0;
+  ${text.complete.xs}
+  gap: 8px;
+  ${breakpoint} {
+    width: 100%;
+  }
 `
-const preview = css``
-const iotas = css`
-  margin-top: 0.5em;
-`
-const designColor = css``
-const artColor = css``
-const writingColor = css``
 
 export default function ProjectsList() {
   return (
@@ -47,7 +108,6 @@ export default function ProjectsList() {
                 title
                 description
                 preview
-                category
                 startDate
                 endDate
                 sortDate
@@ -72,42 +132,39 @@ export default function ProjectsList() {
         const projects = data.projects.nodes
         return (
           <div className={projectsList}>
+            <Tabs />
             {projects.map(project => (
               <div key={project.id}>
                 <Link
                   className={projectLink}
                   to={"/projects/" + project.frontmatter.slug}
                 >
-                  {project.frontmatter.thumb && (
-                    <>
-                      <GatsbyImage
-                        image={
-                          project.frontmatter.thumb.childImageSharp
-                            .gatsbyImageData
-                        }
-                        alt={project.frontmatter.title}
-                        className={projectImage}
-                      />
-                    </>
-                  )}
-
-                  <div className={label}>
-                    <div>
-                      <span className={title}>{project.frontmatter.title}</span>{" "}
-                      <span>{project.frontmatter.description}</span>
+                  <div>
+                    <div className="icon">
+                      <OpenIcon size={16} />
                     </div>
-                    <div className={preview}>
-                      <i>{project.frontmatter.preview}</i>
-                    </div>
-                    <div className={iotas}>
-                      {project.frontmatter.category === "design" ? (
-                        <span className={designColor}>Design</span>
-                      ) : project.frontmatter.category === "art" ? (
-                        <span className={artColor}>Art</span>
-                      ) : project.frontmatter.category === "writing" ? (
-                        <span className={writingColor}>Writing</span>
-                      ) : null}
-                      {" / "}
+                    <div className={title}>{project.frontmatter.title}</div>
+                  </div>
+                  <div className={theRest}>
+                    {project.frontmatter.thumb ? (
+                      <>
+                        <GatsbyImage
+                          image={
+                            project.frontmatter.thumb.childImageSharp
+                              .gatsbyImageData
+                          }
+                          alt={project.frontmatter.title}
+                          className={projectContent}
+                        />
+                      </>
+                    ) : (
+                      <div>
+                        {project.frontmatter.preview}
+                        <div className="inherit">...</div>
+                      </div>
+                    )}
+                    <div className={cx(label, "inherit")}>
+                      <div>{project.frontmatter.description}</div>
                       <div style={{ display: "inline-block" }}>
                         {project.frontmatter.startDate}&nbsp;
                         {project.frontmatter.endDate}
