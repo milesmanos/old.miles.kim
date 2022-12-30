@@ -1,7 +1,7 @@
 ---
 title: Design / Art
-description: — A short essay about two things close to my heart.
-preview: Design and art are both about embodiment. Design is about posture, and art is about gesture. Design is about presentation, art is about what is presented...
+description: Essay
+preview: Design and art are both about embodiment. Design is about posture, and art is about gesture. Design is about presentation, art is about what is presented.
 category: writing
 subType: essay
 slug: design-art

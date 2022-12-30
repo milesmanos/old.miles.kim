@@ -7,7 +7,7 @@ import { colors } from "../styles/styleObjects/colors"
 import { breakpoint } from "../styles/styleObjects/layout"
 import { Spacers } from "../styles/styleObjects/spacers"
 import { text } from "../styles/styleObjects/text"
-import Button from "./buttons/Button"
+import Button from "./Button"
 
 const navLayout = css`
   ${text.complete.sm}

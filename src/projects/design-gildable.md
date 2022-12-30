@@ -1,6 +1,6 @@
 ---
 title: Gildable
-description: was an NFT platform.
+description: Digital Product. An NFT platform.
 category: design
 slug: gildable
 startDate: Aug 2021

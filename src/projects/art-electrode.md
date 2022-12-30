@@ -1,10 +1,9 @@
 ---
 title: Electrode
-description: — Oil paint, oil sticks, enamel paint, canvas, paper scraps, foam, staples on unstretched canvas.
+description: Painting. Oil paint, oil sticks, enamel paint, canvas, paper scraps, foam, staples on unstretched canvas.
 category: art
 slug: electrode
 startDate: Feb 2020
-endDate: – Present
 sortDate: 2020-02-01T00:00:00+00:00
 thumb: ../images/art/electrode.jpg
 subType: painting

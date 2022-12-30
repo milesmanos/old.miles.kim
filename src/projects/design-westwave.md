@@ -1,6 +1,6 @@
 ---
 title: Westwave Capital
-description: is a deep tech investment firm.
+description: Website. A deep tech investment firm.
 category: design
 slug: westwave
 startDate: Apr 2021

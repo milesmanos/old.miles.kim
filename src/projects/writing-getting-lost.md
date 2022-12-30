@@ -1,7 +1,7 @@
 ---
 title: Getting Lost
-description: — An essay composed of fragments written on a road trip.
-preview: I often find myself around cows, sloping around, looking for a place to be. In a field along the Lost Coast, I awoke to one outside my car window, a large black bull whinnying in distress...
+description: Essay
+preview: I often find myself around cows, sloping around, looking for a place to be. In a field along the Lost Coast, I awoke to one outside my car window, a large black bull whinnying in distress
 category: writing
 subType: essay
 slug: getting-lost
