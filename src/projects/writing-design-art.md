@@ -1,13 +1,23 @@
 ---
 title: Design / Art
-description: Essay
+# thumb:
 preview: Design and art are both about embodiment. Design is about posture, and art is about gesture. Design is about presentation, art is about what is presented.
+featured: y
+
 category: writing
-subType: essay
+description: Essay
+
+length: 3 min read
+# size:
+place: Agness, OR
+
+startDate: Feb 2021
+# endDate:
+sortDate: 2021-02-01T00:00:00+00:00
+
 slug: design-art
-place: Oahu, HI
-startDate: May 2021
-sortDate: 2021-05-01T00:00:00+00:00
+# url:
+featuredImg: ../images/art/honey-jar.jpg
 ---
 
 Design and art are both about embodiment. Design is about _posture_, and art is about _gesture_. Design is about presentation, art is about what is presented.

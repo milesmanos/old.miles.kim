@@ -3,7 +3,7 @@ import React from "react"
 import "../styles/global.css"
 import "../styles/normalize.css"
 import { colors } from "../styles/styleObjects/colors"
-import Navbar from "./Navbar"
+import Header from "./Header"
 
 const pageWrapper = css``
 
@@ -22,7 +22,7 @@ const mainBody = css`
 export default function ProjectLayout({ children }) {
   return (
     <div className={pageWrapper}>
-      <Navbar isClear />
+      <Header isClear />
       <div className={hero}>hero</div>
       <div className={mainBody}>{children}</div>
     </div>

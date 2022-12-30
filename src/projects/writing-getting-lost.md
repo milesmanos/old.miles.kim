@@ -1,13 +1,22 @@
 ---
 title: Getting Lost
-description: Essay
-preview: I often find myself around cows, sloping around, looking for a place to be. In a field along the Lost Coast, I awoke to one outside my car window, a large black bull whinnying in distress
+# thumb:
+preview: I often find myself around cows, sloping around, looking for a place to be. In a field along the Lost Coast, I awoke to one outside my car window, a large black bull whinnying in distress.
+featured: n
+
 category: writing
-subType: essay
-slug: getting-lost
+description: Essay
+
+length: 3 min read
+# size:
 place: Agness, OR
+
 startDate: Feb 2021
+# endDate:
 sortDate: 2021-02-01T00:00:00+00:00
+
+slug: getting-lost
+# url:
 featuredImg: ../images/art/elk.jpg
 ---
 

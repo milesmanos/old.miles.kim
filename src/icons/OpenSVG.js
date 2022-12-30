@@ -1,6 +1,6 @@
 import React from "react"
 
-export function OpenIcon({ size }) {
+export function OpenSVG({ size }) {
   return (
     <svg viewBox="0 0 16 16" height={size} width={size}>
       <path

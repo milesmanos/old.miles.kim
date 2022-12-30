@@ -5,13 +5,7 @@ import ProjectCard from "../components/ProjectCard"
 import { OpenSVG } from "../icons/OpenSVG"
 import { ExternalLinkSVG } from "../icons/ExternalLinkSVG"
 
-// Hello again Miles! File Structure:
-// - Home: index.js (layout in HomeLayout.js)
-// - Projects List: /components/ProjectsList.js
-// - Project queries: /templates/project-details.js
-// - Project layouts: /components/ProjectLayout.js
-
-export default function Home({ data }) {
+export default function Writing({ data }) {
   const projects = data.projects.nodes
   return (
     <HomeLayout>
@@ -37,9 +31,9 @@ export default function Home({ data }) {
 }
 
 export const query = graphql`
-  query HomeQuery {
+  query WritingQuery {
     projects: allMarkdownRemark(
-      filter: { frontmatter: { featured: { eq: "y" } } }
+      filter: { frontmatter: { category: { eq: "writing" } } }
       sort: { order: DESC, fields: frontmatter___sortDate }
     ) {
       nodes {
