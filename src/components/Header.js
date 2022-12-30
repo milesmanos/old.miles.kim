@@ -2,10 +2,9 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { css, cx } from "linaria"
 import React, { useState } from "react"
-import { XIcon } from "../icons/XIcon"
+import { XSVG } from "../icons/XSVG"
 import { colors } from "../styles/styleObjects/colors"
 import { breakpoint } from "../styles/styleObjects/layout"
-import { Spacers } from "../styles/styleObjects/spacers"
 import { text } from "../styles/styleObjects/text"
 import Button from "./Button"
 
@@ -100,7 +99,7 @@ const profPic = css`
   border-radius: 2px;
 `
 
-export default function Navbar({ isClear }) {
+export default function Header({ isClear }) {
   const [showInfo, setShowInfo] = useState(false)
 
   return (
@@ -158,7 +157,7 @@ export default function Navbar({ isClear }) {
                 <Button isFullWidth onClick={() => setShowInfo(false)}>
                   <div className="text">Close</div>
                   <div className="icon">
-                    <XIcon size={16} />
+                    <XSVG size={16} />
                   </div>
                 </Button>
               </div>

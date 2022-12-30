@@ -6,7 +6,7 @@ import { text } from "../styles/styleObjects/text"
 const buttonSty = css`
   ${text.complete.sm};
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   border-bottom: 1px solid ${colors.line.light};
   margin-bottom: -1px;

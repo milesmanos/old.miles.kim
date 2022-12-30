@@ -1,5 +1,3 @@
-import { graphql } from "gatsby"
-
 // export const AllProjectsQuery = graphql`
 //   query AllProjectsQuery {
 //     projects: allMarkdownRemark(
