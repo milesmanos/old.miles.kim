@@ -5,7 +5,7 @@ thumb: ../images/thumbs/design-pliny.jpg
 featured: y
 
 category: design
-description: Digital Product. A collaborative tool for prompt engineers.
+description: "Digital product: a collaborative tool for prompt engineers."
 
 # length:
 # size:

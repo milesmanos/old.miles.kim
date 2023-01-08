@@ -5,10 +5,10 @@ thumb: ../images/art/electrode.jpg
 featured: y
 
 category: art
-description: Painting. Oil paint, oil sticks, enamel paint, canvas, paper scraps, foam, staples on unstretched canvas.
+description: "Painting: oil paint, oil sticks, enamel paint, canvas, paper scraps, foam, staples on unstretched canvas."
 
 # length:
-size: 9′ • 9′
+size: 9′ x 9′
 place: New Haven, CT
 
 startDate: Feb 2020

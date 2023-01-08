@@ -5,10 +5,10 @@ thumb: ../images/art/earthworm.jpg
 featured: y
 
 category: art
-description: Painting. Oil paint, oil sticks, enamel paint on unstretched canvas
+description: "Painting: oil paint, oil sticks, enamel paint on unstretched canvas."
 
 # length:
-size: 6′ • 6′
+size: 6′ x 6′
 place: New Haven, CT
 
 startDate: October 2019

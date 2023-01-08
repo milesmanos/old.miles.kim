@@ -5,10 +5,10 @@ thumb: ../images/art/5-min.jpg
 featured: y
 
 category: art
-description: Painting. Oil and charcoal on paper.
+description: "Painting: oil and charcoal on paper."
 
 # length:
-size: 24″ • 18″
+size: 24″ x 18″
 place: New Haven, CT
 
 startDate: November 2019

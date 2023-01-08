@@ -5,7 +5,7 @@ thumb: ../images/thumbs/design-ahoy.jpg
 featured: n
 
 category: design
-description: Digital Product. A platform for bringing ideas to life.
+description: "Digital product: a platform for bringing ideas to life."
 
 # length:
 # size:

@@ -5,10 +5,10 @@ thumb: ../images/art/honey-jar.jpg
 featured: y
 
 category: art
-description: Painting. Oil on canvas.
+description: "Painting: oil on canvas."
 
 # length:
-size: 20″ • 36″
+size: 20″ x 36″
 place: New Haven, CT
 
 startDate: February 2019

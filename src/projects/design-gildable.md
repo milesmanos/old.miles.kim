@@ -5,7 +5,7 @@ thumb: ../images/thumbs/design-gildable.jpg
 featured: n
 
 category: design
-description: Digital Product. An NFT platform.
+description: "Digital product: an NFT platform."
 
 # length:
 # size:
