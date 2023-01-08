@@ -104,23 +104,23 @@ export default function WritingTemplate({ data }) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
-          {sessionStorage.getItem("@@scroll|/|initial") ? (
+          {/* {sessionStorage.getItem("@@scroll|/|initial") ? (
             <Button isFullWidth onClick={() => navigate(-1)}>
               <div className="text">Back to All Projects </div>
               <div className="icon">
                 <CloseSVG size={16} />
               </div>
             </Button>
-          ) : (
-            <Link style={{ width: "100%" }} to="/">
-              <Button isFullWidth>
-                <div className="text">Back to All Projects </div>
-                <div className="icon">
-                  <CloseSVG size={16} />
-                </div>
-              </Button>
-            </Link>
-          )}
+          ) : ( */}
+          <Link style={{ width: "100%" }} to="/">
+            <Button isFullWidth>
+              <div className="text">Back to All Projects </div>
+              <div className="icon">
+                <CloseSVG size={16} />
+              </div>
+            </Button>
+          </Link>
+          {/* )} */}
         </div>
       </div>
     </div>
