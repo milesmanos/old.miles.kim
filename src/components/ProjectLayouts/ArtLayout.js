@@ -1,9 +1,9 @@
 import { css } from "linaria"
 import React from "react"
-import "../styles/global.css"
-import "../styles/normalize.css"
-import { colors } from "../styles/styleObjects/colors"
-import Header from "./Header"
+import "../../styles/global.css"
+import "../../styles/normalize.css"
+import { colors } from "../../styles/styleObjects/colors"
+import Header from "../Header"
 
 const pageWrapper = css``
 
@@ -19,7 +19,7 @@ const mainBody = css`
   padding: 24px;
 `
 
-export default function ProjectLayout({ children }) {
+export default function ArtLayout({ children }) {
   return (
     <div className={pageWrapper}>
       <Header isClear />

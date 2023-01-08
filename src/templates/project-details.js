@@ -1,5 +1,5 @@
 import React from "react"
-import ProjectLayout from "../components/ProjectLayout.js"
+import ArtLayout from "../components/ProjectLayouts/ArtLayout.js"
 import { graphql, Link, navigate } from "gatsby"
 import { Spacers } from "../styles/styleObjects/spacers.js"
 import { css } from "linaria"
@@ -15,7 +15,7 @@ export default function ProjectDetails({ data }) {
   //   data.markdownRemark.frontmatter
 
   return (
-    <ProjectLayout>
+    <ArtLayout>
       children
       {/* <div className={mainContent}>
         {sessionStorage.getItem("@@scroll|/|initial") ? (
@@ -45,7 +45,7 @@ export default function ProjectDetails({ data }) {
         )}
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div> */}
-    </ProjectLayout>
+    </ArtLayout>
   )
 }
 

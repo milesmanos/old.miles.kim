@@ -12,7 +12,7 @@ description: "Digital product: a collaborative tool for prompt engineers."
 place: San Francisco, CA
 
 startDate: Dec 2022
-endDate: – Present
+endDate: – present
 sortDate: 2022-12-01T00:00:00+00:00
 
 slug: pliny

@@ -15,7 +15,7 @@ const navLayout = css`
 const Footer = () => {
   return (
     <div className={navLayout}>
-      <div>Designed and built by Miles Kim</div>
+      <div>Miles Kim</div>
       <div>i@miles.kim</div>
     </div>
   )
