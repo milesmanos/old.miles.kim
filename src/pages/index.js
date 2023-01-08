@@ -24,7 +24,9 @@ export default function Home({ data }) {
               </ProjectCard>
             </a>
           ) : (
-            <Link to={"/projects/" + project.frontmatter.slug}>
+            <Link
+              to={project.frontmatter.category + "/" + project.frontmatter.slug}
+            >
               <ProjectCard project={project}>
                 <OpenSVG size={16} />
               </ProjectCard>

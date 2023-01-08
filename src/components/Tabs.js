@@ -22,6 +22,7 @@ const link = css`
   padding: 12px 20px;
   border-radius: 99px;
   :hover {
+    border: 1px solid ${colors.black.secondary};
     color: ${colors.black.primary};
   }
 
@@ -43,6 +44,7 @@ const link = css`
 
 const redLink = css`
   :hover {
+    border: 1px solid ${colors.red};
     color: ${colors.red};
   }
   :active {
@@ -57,6 +59,7 @@ const redLink = css`
 `
 const greenLink = css`
   :hover {
+    border: 1px solid ${colors.green};
     color: ${colors.green};
   }
   :active {
@@ -71,6 +74,7 @@ const greenLink = css`
 `
 const blueLink = css`
   :hover {
+    border: 1px solid ${colors.blue};
     color: ${colors.blue};
   }
   :active {

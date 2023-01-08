@@ -180,6 +180,7 @@ export default function Header({ isClear }) {
                         }, 2000)
                       }}
                       isDisabled={copiedText === "i@miles.kim"}
+                      isAlwaysPrimaryText
                     >
                       <div className="text">
                         {copiedText === "i@miles.kim"
@@ -203,7 +204,7 @@ export default function Header({ isClear }) {
                       rel="noreferrer"
                       style={{ width: "100%" }}
                     >
-                      <Button isFullWidth>
+                      <Button isFullWidth isAlwaysPrimaryText>
                         <div className="text">mileskim.substack.com</div>
                         <div className="icon">
                           <ExternalLinkSVG size={16} />

@@ -15,7 +15,7 @@ const buttonSty = css`
   div.text {
     display: flex;
     flex-grow: 1;
-    color: ${colors.black.darkest};
+    color: ${colors.black.secondary};
   }
   div.icon {
     display: flex;
@@ -23,6 +23,9 @@ const buttonSty = css`
   }
   :hover {
     border-bottom: 1px solid ${colors.line.dark};
+    div.text {
+      color: ${colors.black.primary};
+    }
     div.icon {
       color: ${colors.black.primary};
     }
@@ -54,6 +57,11 @@ const dark = css`
     }
   }
 `
+const alwaysPrimaryText = css`
+  div.text {
+    color: ${colors.black.primary};
+  }
+`
 const fullWidth = css`
   justify-content: space-between;
   width: 100%;
@@ -76,6 +84,7 @@ export default function Button({
   isFullWidth,
   isNoUnderline,
   isDisabled,
+  isAlwaysPrimaryText,
   onClick,
 }) {
   return (
@@ -84,7 +93,8 @@ export default function Button({
         buttonSty,
         isDark && dark,
         isFullWidth && fullWidth,
-        isNoUnderline && noUnderline
+        isNoUnderline && noUnderline,
+        isAlwaysPrimaryText && alwaysPrimaryText
       )}
       disabled={isDisabled}
       onClick={onClick}

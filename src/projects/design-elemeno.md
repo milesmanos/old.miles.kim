@@ -5,7 +5,7 @@ thumb: ../images/thumbs/design-elemeno.jpg
 featured: n
 
 category: design
-description: Landing page: a lightweight machine learning tool.
+description: "Landing page: a lightweight machine learning tool."
 
 # length:
 # size:

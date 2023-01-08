@@ -18,7 +18,7 @@ export default function Art({ data }) {
               </ProjectCard>
             </a>
           ) : (
-            <Link to={"/projects/" + project.frontmatter.slug}>
+            <Link to={project.frontmatter.slug}>
               <ProjectCard project={project}>
                 <OpenSVG size={16} />
               </ProjectCard>

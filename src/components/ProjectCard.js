@@ -44,12 +44,13 @@ const projectLink = css`
 // Sections:
 const projectHeader = css`
   border-top: 1px solid ${colors.line.light};
-  padding-top: 8px;
+  padding-top: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   ${text.complete.sm};
   div.title {
+    ${text.complete.md};
     color: ${colors.black.darkest};
     font-weight: 500;
   }
@@ -73,11 +74,11 @@ const projectBody = css`
   }
 `
 const iotas = css`
-  color: inherit;
   display: flex;
   flex-direction: column;
   width: 225px;
   flex-shrink: 0;
+  gap: 8px;
   ${breakpoint} {
     width: 100%;
   }

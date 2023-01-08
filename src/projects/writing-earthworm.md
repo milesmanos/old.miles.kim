@@ -20,9 +20,9 @@ slug: writing-earthworm
 featuredImg: ../images/art/earthworm.jpg
 ---
 
-I. Summit‍
-‍
-We stop to watch the view.
+## I. Summit‍
+
+‍We stop to watch the view.
 
 Small movement
 
@@ -51,9 +51,8 @@ Occurring too fast
 
 Totem: white wall of the museum; center, or home of the dispossessed; place of lineage; place of ultimate stillness
 
-‍
-‍
-II. Descent
+## II. Descent
+
 ‍
 Earthworm on the forest floor
 
@@ -105,8 +104,7 @@ sc: squirming; scratching; sound of the scribe
 From below, he waved us down to join
 ‍
 
-‍
-III. House
+## III. House
 
 ‘like a cornered animal
 he fought’

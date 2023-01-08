@@ -29,7 +29,7 @@ module.exports = {
   ],
   siteMetadata: {
     title: "Miles Kim’s Portfolio",
-    description: "Design, Art, and Writing by Miles Kim.",
+    description: "Design, art, and writing by Miles Kim.",
     contact: "i@miles.kim",
   },
 }
