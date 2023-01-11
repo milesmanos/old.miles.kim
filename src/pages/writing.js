@@ -18,7 +18,10 @@ export default function Writing({ data }) {
               </ProjectCard>
             </a>
           ) : (
-            <Link to={project.frontmatter.slug} state={{ fromThisSite: true }}>
+            <Link
+              to={project.frontmatter.slug}
+              state={{ originPage: "Writing" }}
+            >
               <ProjectCard project={project}>
                 <OpenSVG size={16} />
               </ProjectCard>

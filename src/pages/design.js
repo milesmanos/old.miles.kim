@@ -18,7 +18,10 @@ export default function Design({ data }) {
               </ProjectCard>
             </a>
           ) : (
-            <Link to={project.frontmatter.slug} state={{ fromThisSite: true }}>
+            <Link
+              to={project.frontmatter.slug}
+              state={{ originPage: "Design" }}
+            >
               <ProjectCard project={project}>
                 <OpenSVG size={16} />
               </ProjectCard>

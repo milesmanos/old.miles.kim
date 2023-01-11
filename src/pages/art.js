@@ -18,7 +18,7 @@ export default function Art({ data }) {
               </ProjectCard>
             </a>
           ) : (
-            <Link to={project.frontmatter.slug} state={{ fromThisSite: true }}>
+            <Link to={project.frontmatter.slug} state={{ originPage: "Art" }}>
               <ProjectCard project={project}>
                 <OpenSVG size={16} />
               </ProjectCard>

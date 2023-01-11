@@ -1,11 +1,11 @@
 import React from "react"
-import { graphql } from "gatsby"
 import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors.js"
 import { text } from "../styles/styleObjects/text.js"
 import Header from "../components/Header.js"
 import { Spacers } from "../styles/styleObjects/spacers"
 import { GatsbyImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 import BackToHomeButton from "../components/BackToHomeButton.js"
 
 const mainBody = css`
@@ -71,19 +71,32 @@ const mainText = css`
   }
 `
 
-export default function WritingTemplate({
-  data,
-  // location,
-}) {
+export default function WritingTemplate({ data, location }) {
   const { html } = data.markdownRemark
   const { title, description, startDate, featuredImg } =
     data.markdownRemark.frontmatter
 
-  // const isFromThisSite = () => {
-  //   if (location.state.fromThisSite) {
-  //     return true
+  // const BackToHomeButton = () => {
+  //   if (location.state) {
+  //     return (
+  //       <Button isFullWidth onClick={() => navigate(-1)}>
+  //         <div className="text">Back to {location.state.originPage}</div>
+  //         <div className="icon">
+  //           <CloseSVG size={16} />
+  //         </div>
+  //       </Button>
+  //     )
   //   } else {
-  //     return false
+  //     return (
+  //       <Link style={{ width: "100%" }} to="/">
+  //         <Button isFullWidth>
+  //           <div className="text">Home</div>
+  //           <div className="icon">
+  //             <CloseSVG size={16} />
+  //           </div>
+  //         </Button>
+  //       </Link>
+  //     )
   //   }
   // }
 
@@ -111,9 +124,7 @@ export default function WritingTemplate({
             className={mainText}
             dangerouslySetInnerHTML={{ __html: html }}
           />
-          <BackToHomeButton
-          // fromThisSite={isFromThisSite}
-          />
+          <BackToHomeButton originPage={location.state} />
         </div>
       </div>
     </div>
