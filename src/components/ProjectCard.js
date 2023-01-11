@@ -21,13 +21,15 @@ const projectLink = css`
   div.inherit {
     color: ${colors.black.secondary};
   }
-  :hover {
-    color: ${colors.black.darkest};
-    div.inherit {
-      color: ${colors.black.primary};
-    }
-    div.icon {
-      color: ${colors.black.primary};
+  @media (hover: hover) {
+    :hover {
+      color: ${colors.black.darkest};
+      div.inherit {
+        color: ${colors.black.primary};
+      }
+      div.icon {
+        color: ${colors.black.primary};
+      }
     }
   }
   :active {

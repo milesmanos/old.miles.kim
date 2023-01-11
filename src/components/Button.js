@@ -21,15 +21,18 @@ const buttonSty = css`
     display: flex;
     color: ${colors.black.barely};
   }
-  :hover {
-    border-bottom: 1px solid ${colors.line.dark};
-    div.text {
-      color: ${colors.black.primary};
-    }
-    div.icon {
-      color: ${colors.black.primary};
+  @media (hover: hover) {
+    :hover {
+      border-bottom: 1px solid ${colors.line.dark};
+      div.text {
+        color: ${colors.black.primary};
+      }
+      div.icon {
+        color: ${colors.black.primary};
+      }
     }
   }
+
   :active {
     border-bottom: 1px solid ${colors.line.light};
     div.text {
@@ -47,9 +50,12 @@ const dark = css`
   div.text {
     color: white;
   }
-  :hover {
-    border-bottom: 1px solid #808080;
+  @media (hover: hover) {
+    :hover {
+      border-bottom: 1px solid #808080;
+    }
   }
+
   :active {
     border-bottom: 1px solid #494949;
     div.text {
@@ -69,9 +75,11 @@ const fullWidth = css`
 const noUnderline = css`
   border: none;
   color: inherit;
-  :hover {
-    border: none;
-    color: inherit;
+  @media (hover: hover) {
+    :hover {
+      border: none;
+      color: inherit;
+    }
   }
   :active {
     border: none;

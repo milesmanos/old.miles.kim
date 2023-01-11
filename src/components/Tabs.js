@@ -45,9 +45,11 @@ const link = css`
 `
 
 const redLink = css`
-  :hover {
-    border: 1px solid ${colors.red};
-    color: ${colors.red};
+  @media (hover: hover) {
+    :hover {
+      border: 1px solid ${colors.red};
+      color: ${colors.red};
+    }
   }
   :active {
     background-color: ${colors.red};
@@ -60,9 +62,11 @@ const redLink = css`
   }
 `
 const greenLink = css`
-  :hover {
-    border: 1px solid ${colors.green};
-    color: ${colors.green};
+  @media (hover: hover) {
+    :hover {
+      border: 1px solid ${colors.green};
+      color: ${colors.green};
+    }
   }
   :active {
     background-color: ${colors.green};
@@ -75,9 +79,11 @@ const greenLink = css`
   }
 `
 const blueLink = css`
-  :hover {
-    border: 1px solid ${colors.blue};
-    color: ${colors.blue};
+  @media (hover: hover) {
+    :hover {
+      border: 1px solid ${colors.blue};
+      color: ${colors.blue};
+    }
   }
   :active {
     background-color: ${colors.blue};
@@ -92,8 +98,10 @@ const blueLink = css`
 
 // active classes
 const activeAny = css`
-  :hover {
-    color: white;
+  @media (hover: hover) {
+    :hover {
+      color: white;
+    }
   }
 `
 const activeFeatured = css`
