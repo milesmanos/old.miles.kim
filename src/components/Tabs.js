@@ -21,9 +21,11 @@ const link = css`
   justify-content: space-between;
   padding: 12px 20px;
   border-radius: 99px;
-  :hover {
-    border: 1px solid ${colors.black.darkest};
-    color: ${colors.black.darkest};
+  @media (hover: hover) {
+    :hover {
+      border: 1px solid ${colors.black.darkest};
+      color: ${colors.black.darkest};
+    }
   }
 
   div.ellipse {
