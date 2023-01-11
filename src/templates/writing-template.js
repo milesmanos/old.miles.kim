@@ -71,10 +71,21 @@ const mainText = css`
   }
 `
 
-export default function WritingTemplate({ data }) {
+export default function WritingTemplate({
+  data,
+  // location,
+}) {
   const { html } = data.markdownRemark
   const { title, description, startDate, featuredImg } =
     data.markdownRemark.frontmatter
+
+  // const isFromThisSite = () => {
+  //   if (location.state.fromThisSite) {
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // }
 
   return (
     <div>
@@ -89,7 +100,6 @@ export default function WritingTemplate({ data }) {
             <Spacers.Vertical._8px />
             {title}
           </div>
-
           {featuredImg && (
             <GatsbyImage
               image={featuredImg.childImageSharp.gatsbyImageData}
@@ -97,13 +107,13 @@ export default function WritingTemplate({ data }) {
               className={gatsbyImg}
             />
           )}
-
           <div
             className={mainText}
             dangerouslySetInnerHTML={{ __html: html }}
           />
-
-          <BackToHomeButton />
+          <BackToHomeButton
+          // fromThisSite={isFromThisSite}
+          />
         </div>
       </div>
     </div>

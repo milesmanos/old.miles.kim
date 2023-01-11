@@ -26,6 +26,7 @@ export default function Home({ data }) {
           ) : (
             <Link
               to={project.frontmatter.category + "/" + project.frontmatter.slug}
+              state={{ fromThisSite: true }}
             >
               <ProjectCard project={project}>
                 <OpenSVG size={16} />
