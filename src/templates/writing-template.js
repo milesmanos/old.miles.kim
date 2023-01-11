@@ -19,7 +19,7 @@ const mainBody = css`
     flex-direction: column;
     align-items: flex-start;
     padding: 48px 24px;
-    gap: 72px;
+    gap: 48px;
     width: 100%;
     max-width: 600px;
   }
@@ -124,6 +124,7 @@ export default function WritingTemplate({ data, location }) {
             className={mainText}
             dangerouslySetInnerHTML={{ __html: html }}
           />
+          <Spacers.Vertical._0px />
           <BackToHomeButton originPage={location.state} />
         </div>
       </div>

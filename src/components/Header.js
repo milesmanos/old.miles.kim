@@ -10,6 +10,7 @@ import { text } from "../styles/styleObjects/text"
 import Button from "./Button"
 import { CopySVG } from "../icons/CopySVG"
 import { CheckSVG } from "../icons/CheckSVG"
+import { Spacers } from "../styles/styleObjects/spacers"
 
 const navLayout = css`
   ${text.complete.sm}
@@ -224,6 +225,7 @@ export default function Header({ isClear }) {
                   aspectRatio={1 / 1}
                   className={profPic}
                 />
+                <Spacers.Vertical._0px />
                 <Button isFullWidth onClick={() => setShowInfo(false)}>
                   <div className="text">Close</div>
                   <div className="icon">

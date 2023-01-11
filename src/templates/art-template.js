@@ -7,6 +7,7 @@ import Header from "../components/Header"
 import { text } from "../styles/styleObjects/text"
 import { breakpoint } from "../styles/styleObjects/layout"
 import BackToHomeButton from "../components/BackToHomeButton"
+import { Spacers } from "../styles/styleObjects/spacers"
 
 const hero = css`
   height: 100vh;
@@ -71,7 +72,7 @@ const descSty = css`
   }
 `
 
-export default function ArtTemplate({ data }) {
+export default function ArtTemplate({ data, location }) {
   const { title, startDate, description, size, featuredImg } =
     data.markdownRemark.frontmatter
 
@@ -105,7 +106,8 @@ export default function ArtTemplate({ data }) {
               </div>
             </div>
           </div>
-          <BackToHomeButton />
+          <Spacers.Vertical._0px />
+          <BackToHomeButton originPage={location.state} />
         </div>
       </div>
     </div>

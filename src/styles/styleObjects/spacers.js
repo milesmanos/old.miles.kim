@@ -9,6 +9,9 @@ const width4px = css`
   width: 4px;
 `
 
+const height0px = css`
+  height: 0px;
+`
 const height4px = css`
   height: 4px;
 `
@@ -30,6 +33,7 @@ export const Spacers = {
     _4px: () => <div className={cx(noFlexShrink, width4px)} />,
   },
   Vertical: {
+    _0px: () => <div className={cx(noFlexShrink, height0px)} />,
     _4px: () => <div className={cx(noFlexShrink, height4px)} />,
     _8px: () => <div className={cx(noFlexShrink, height8px)} />,
     _48px: () => <div className={cx(noFlexShrink, height48px)} />,
