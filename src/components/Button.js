@@ -80,21 +80,21 @@ const noUnderline = css`
 
 export default function Button({
   children,
-  isDark,
+  isLightbox,
   isFullWidth,
   isNoUnderline,
   isDisabled,
-  isAlwaysPrimaryText,
+  isBlack,
   onClick,
 }) {
   return (
     <button
       className={cx(
         buttonSty,
-        isDark && dark,
+        isLightbox && dark,
         isFullWidth && fullWidth,
         isNoUnderline && noUnderline,
-        isAlwaysPrimaryText && alwaysPrimaryText
+        isBlack && alwaysPrimaryText
       )}
       disabled={isDisabled}
       onClick={onClick}

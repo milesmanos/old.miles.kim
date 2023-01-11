@@ -128,7 +128,11 @@ export default function Header({ isClear }) {
           Miles Kim
         </Link>
       </div>
-      <Button isDark={isClear} onClick={() => setShowInfo(!showInfo)}>
+      <Button
+        isLightbox={isClear}
+        isBlack={!isClear}
+        onClick={() => setShowInfo(!showInfo)}
+      >
         <div className="text">Info</div>
       </Button>
 
@@ -180,7 +184,7 @@ export default function Header({ isClear }) {
                         }, 2000)
                       }}
                       isDisabled={copiedText === "i@miles.kim"}
-                      isAlwaysPrimaryText
+                      isBlack
                     >
                       <div className="text">
                         {copiedText === "i@miles.kim"
@@ -204,7 +208,7 @@ export default function Header({ isClear }) {
                       rel="noreferrer"
                       style={{ width: "100%" }}
                     >
-                      <Button isFullWidth isAlwaysPrimaryText>
+                      <Button isFullWidth isBlack>
                         <div className="text">mileskim.substack.com</div>
                         <div className="icon">
                           <ExternalLinkSVG size={16} />

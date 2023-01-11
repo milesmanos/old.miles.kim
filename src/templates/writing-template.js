@@ -1,13 +1,12 @@
 import React from "react"
-import { graphql, Link, navigate } from "gatsby"
+import { graphql } from "gatsby"
 import { css } from "linaria"
 import { colors } from "../styles/styleObjects/colors.js"
 import { text } from "../styles/styleObjects/text.js"
 import Header from "../components/Header.js"
-import Button from "../components/Button.js"
-import { CloseSVG } from "../icons/CloseSVG.js"
 import { Spacers } from "../styles/styleObjects/spacers"
 import { GatsbyImage } from "gatsby-plugin-image"
+import BackToHomeButton from "../components/BackToHomeButton.js"
 
 const mainBody = css`
   display: flex;
@@ -104,23 +103,7 @@ export default function WritingTemplate({ data }) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
 
-          {/* {sessionStorage.getItem("@@scroll|/|initial") ? (
-            <Button isFullWidth onClick={() => navigate(-1)}>
-              <div className="text">Back to All Projects </div>
-              <div className="icon">
-                <CloseSVG size={16} />
-              </div>
-            </Button>
-          ) : ( */}
-          <Link style={{ width: "100%" }} to="/">
-            <Button isFullWidth>
-              <div className="text">Back to All Projects </div>
-              <div className="icon">
-                <CloseSVG size={16} />
-              </div>
-            </Button>
-          </Link>
-          {/* )} */}
+          <BackToHomeButton />
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ import { text } from "../styles/styleObjects/text"
 import { breakpoint } from "../styles/styleObjects/layout"
 import Button from "../components/Button"
 import { CloseSVG } from "../icons/CloseSVG"
+import BackToHomeButton from "../components/BackToHomeButton"
 
 const hero = css`
   height: 100vh;
@@ -106,24 +107,7 @@ export default function ArtTemplate({ data }) {
               </div>
             </div>
           </div>
-
-          {/* {sessionStorage.getItem("@@scroll|/|initial") ? (
-            <Button isFullWidth onClick={() => navigate(-1)}>
-              <div className="text">Back to All Projects </div>
-              <div className="icon">
-                <CloseSVG size={16} />
-              </div>
-            </Button>
-          ) : ( */}
-          <Link style={{ width: "100%" }} to="/">
-            <Button isFullWidth>
-              <div className="text">Back to All Projects </div>
-              <div className="icon">
-                <CloseSVG size={16} />
-              </div>
-            </Button>
-          </Link>
-          {/* )} */}
+          <BackToHomeButton />
         </div>
       </div>
     </div>
