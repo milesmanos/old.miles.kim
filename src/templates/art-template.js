@@ -1,13 +1,11 @@
 import React from "react"
-import { graphql, Link, navigate } from "gatsby"
+import { graphql } from "gatsby"
 import { css } from "linaria"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { colors } from "../styles/styleObjects/colors"
 import Header from "../components/Header"
 import { text } from "../styles/styleObjects/text"
 import { breakpoint } from "../styles/styleObjects/layout"
-import Button from "../components/Button"
-import { CloseSVG } from "../icons/CloseSVG"
 import BackToHomeButton from "../components/BackToHomeButton"
 
 const hero = css`
