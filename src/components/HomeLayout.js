@@ -1,5 +1,5 @@
-import { css, cx } from "linaria"
-import React, { useState } from "react"
+import { css } from "linaria"
+import React from "react"
 import "../styles/global.css"
 import "../styles/normalize.css"
 import Header from "./Header"
@@ -20,15 +20,9 @@ const mainBody = css`
   gap: 72px;
 `
 
-const scrollDisabledCss = css`
-  overflow: hidden;
-`
-
 export default function ProjectLayout({ children }) {
-  const [scrollDisabled, setScrollDisabled] = useState(false)
-
   return (
-    <div className={cx(pageWrapper, scrollDisabledCss)}>
+    <div className={pageWrapper}>
       <Header />
       <div className={mainBody}>
         <Tabs />
