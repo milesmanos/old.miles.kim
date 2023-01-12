@@ -11,6 +11,7 @@ import Button from "./Button"
 import { CopySVG } from "../icons/CopySVG"
 import { CheckSVG } from "../icons/CheckSVG"
 import { Spacers } from "../styles/styleObjects/spacers"
+import useWindowDimensions from "../hooks/useWindowDimensions"
 
 const navLayout = css`
   ${text.complete.sm}
@@ -121,6 +122,7 @@ const profPic = css`
 export default function Header({ isClear }) {
   const [showInfo, setShowInfo] = useState(false)
   const [copiedText, setCopiedText] = useState("")
+  const { height } = useWindowDimensions()
 
   const handleOpenInfo = () => {
     document.getElementsByTagName("html")[0].style.overflowY = "hidden"
@@ -149,7 +151,7 @@ export default function Header({ isClear }) {
       {/* Info */}
       {showInfo && (
         <>
-          <div className={infoOverlay}>
+          <div className={infoOverlay} style={{ height: height }}>
             <div className={infoBox}>
               <div className={mockNav}>
                 <div className={flexGrow}>
