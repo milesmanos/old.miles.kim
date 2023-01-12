@@ -122,6 +122,15 @@ export default function Header({ isClear }) {
   const [showInfo, setShowInfo] = useState(false)
   const [copiedText, setCopiedText] = useState("")
 
+  const handleOpenInfo = () => {
+    document.getElementsByTagName("html")[0].style.overflowY = "hidden"
+    setShowInfo(true)
+  }
+  const handleCloseInfo = () => {
+    document.getElementsByTagName("html")[0].style.overflowY = "scroll"
+    setShowInfo(false)
+  }
+
   return (
     <div className={cx(navLayout, isClear && clear)}>
       <div className={flexGrow}>
@@ -132,7 +141,7 @@ export default function Header({ isClear }) {
       <Button
         isLightbox={isClear}
         isBlack={!isClear}
-        onClick={() => setShowInfo(!showInfo)}
+        onClick={() => handleOpenInfo()}
       >
         <div className="text">Info</div>
       </Button>
@@ -148,7 +157,7 @@ export default function Header({ isClear }) {
                     Miles Kim
                   </Link>
                 </div>
-                <Button onClick={() => setShowInfo(false)}>
+                <Button onClick={() => handleCloseInfo()}>
                   <div className="text">Close</div>
                 </Button>
               </div>
@@ -226,7 +235,7 @@ export default function Header({ isClear }) {
                   className={profPic}
                 />
                 <Spacers.Vertical._0px />
-                <Button isFullWidth onClick={() => setShowInfo(false)}>
+                <Button isFullWidth onClick={() => handleCloseInfo()}>
                   <div className="text">Close</div>
                   <div className="icon">
                     <CloseSVG size={16} />
@@ -236,7 +245,7 @@ export default function Header({ isClear }) {
             </div>
             <button
               className={clickOutToClose}
-              onClick={() => setShowInfo(!showInfo)}
+              onClick={() => handleCloseInfo()}
             >
               {" "}
             </button>

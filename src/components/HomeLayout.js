@@ -1,5 +1,5 @@
-import { css } from "linaria"
-import React from "react"
+import { css, cx } from "linaria"
+import React, { useState } from "react"
 import "../styles/global.css"
 import "../styles/normalize.css"
 import Header from "./Header"
@@ -11,11 +11,6 @@ const pageWrapper = css`
   flex-direction: column;
   align-items: center;
 `
-
-// const hero = css`
-//   height: 100vh;
-// `
-
 const mainBody = css`
   max-width: 1000px;
   padding: 104px 24px 72px 24px;
@@ -25,18 +20,16 @@ const mainBody = css`
   gap: 72px;
 `
 
+const scrollDisabledCss = css`
+  overflow: hidden;
+`
+
 export default function ProjectLayout({ children }) {
+  const [scrollDisabled, setScrollDisabled] = useState(false)
+
   return (
-    <div className={pageWrapper}>
+    <div className={cx(pageWrapper, scrollDisabledCss)}>
       <Header />
-
-      {/* <StaticImage
-      src="../images/art/electrode.jpg"
-      alt="Electrode — Painting"
-      className={hero}
-      quality={100}
-    /> */}
-
       <div className={mainBody}>
         <Tabs />
         {children}
