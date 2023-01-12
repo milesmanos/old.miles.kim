@@ -7,6 +7,13 @@ function getWindowDimensions() {
       width,
       height,
     }
+  } else {
+    const width = "100vw"
+    const height = "100vw"
+    return {
+      width,
+      height,
+    }
   }
 }
 
