@@ -15,7 +15,7 @@ startDate: December 2017
 # endDate:
 sortDate: 2017-12-01T00:00:00+00:00
 
-slug: mila
+slug: "mila"
 # url:
 featuredImg: ../images/art/mila.jpg
 ---
