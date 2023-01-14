@@ -8,7 +8,7 @@ category: art
 description: "Painting: oil and charcoal on paper."
 
 # length:
-size: 24″ x 18″
+size: 24" x 18"
 place: New Haven, CT
 
 startDate: November 2019

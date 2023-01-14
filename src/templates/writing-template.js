@@ -77,7 +77,7 @@ const mainText = css`
 
 const essayFirstLine = css`
   ::first-line {
-    font-weight: 600;
+    font-weight: 500;
     color: ${colors.black.darkest};
   }
 `

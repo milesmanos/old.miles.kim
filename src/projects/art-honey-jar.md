@@ -8,7 +8,7 @@ category: art
 description: "Painting: oil on canvas."
 
 # length:
-size: 20″ x 36″
+size: 20" x 36"
 place: New Haven, CT
 
 startDate: February 2019
