@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "linaria"
+import { css, cx } from "linaria"
 import { colors } from "../styles/styleObjects/colors.js"
 import { text } from "../styles/styleObjects/text.js"
 import Header from "../components/Header.js"
@@ -19,9 +19,8 @@ const mainBody = css`
     flex-direction: column;
     align-items: flex-start;
     padding: 48px 24px;
-    gap: 48px;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
   }
 `
 
@@ -42,7 +41,7 @@ const titleSty = css`
     gap: 8px;
     ${text.complete.xs}
     font-weight: 400;
-    color: ${colors.black.barely};
+    color: ${colors.black.secondary};
   }
 `
 
@@ -56,18 +55,30 @@ const gatsbyImg = css`
 `
 
 const mainText = css`
-  /* ::first-line {
-    font-weight: 600;
-  } */
+  margin-top: 56px;
   p {
-    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 28px;
+    strong {
+      font-weight: 600;
+    }
   }
   h2 {
     ${text.complete.md};
     color: ${colors.black.darkest};
     font-weight: 500;
-    margin-top: 48px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
+    :not(:first-child) {
+      margin-top: 56px;
+    }
+  }
+`
+
+const essayFirstLine = css`
+  ::first-line {
+    font-weight: 600;
+    color: ${colors.black.darkest};
   }
 `
 
@@ -76,55 +87,33 @@ export default function WritingTemplate({ data, location }) {
   const { title, description, startDate, featuredImg } =
     data.markdownRemark.frontmatter
 
-  // const BackToHomeButton = () => {
-  //   if (location.state) {
-  //     return (
-  //       <Button isFullWidth onClick={() => navigate(-1)}>
-  //         <div className="text">Back to {location.state.originPage}</div>
-  //         <div className="icon">
-  //           <CloseSVG size={16} />
-  //         </div>
-  //       </Button>
-  //     )
-  //   } else {
-  //     return (
-  //       <Link style={{ width: "100%" }} to="/">
-  //         <Button isFullWidth>
-  //           <div className="text">Home</div>
-  //           <div className="icon">
-  //             <CloseSVG size={16} />
-  //           </div>
-  //         </Button>
-  //       </Link>
-  //     )
-  //   }
-  // }
-
   return (
     <div>
       <Header />
       <div className={mainBody}>
         <div className="container">
           <div className={titleSty}>
-            <div className="iotas">
-              <div className="divider" />
-              {description}, {startDate}
-            </div>
-            <Spacers.Vertical._8px />
             {title}
+            <Spacers.Vertical._8px />
+            <div className="iotas">
+              {description} / {startDate}
+            </div>
           </div>
-          {featuredImg && (
-            <GatsbyImage
-              image={featuredImg.childImageSharp.gatsbyImageData}
-              alt={title}
-              className={gatsbyImg}
-            />
-          )}
           <div
-            className={mainText}
+            className={cx(description === "Essay" && essayFirstLine, mainText)}
             dangerouslySetInnerHTML={{ __html: html }}
           />
-          <Spacers.Vertical._0px />
+          {featuredImg && (
+            <>
+              <Spacers.Vertical._48px />
+              <GatsbyImage
+                image={featuredImg.childImageSharp.gatsbyImageData}
+                alt={title}
+                className={gatsbyImg}
+              />
+            </>
+          )}
+          <Spacers.Vertical._96px />
           <BackToHomeButton originPage={location.state} />
         </div>
       </div>

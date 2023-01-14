@@ -30,7 +30,7 @@ I thought about, of all things, my scarf, a woolen white one with stark navy str
 
 I left the thought and watched the ocean again, feeling naked.
 
----
+—
 
 Not just the beauty but the brutality of it:
 
@@ -39,13 +39,13 @@ The starfish like roaming hands tearing at things in shells
 The seagulls prowling above (nothing escapes their sight)
 The surfer at the edge, facing out
 
----
+—
 
 Sleeping on remote roads makes you aware of fear. It’s not abstract, like it is in the city. In my mind I saw a black bear roaming.
 
 It was all there, the whole forest. I was face-to-face with it.
 
----
+—
 
 _It’s winter but the buds are coming._
 _I sleep on the moss and when I wake I see them up close, coming through every trodden crevice, little green things in the dust_
@@ -56,7 +56,7 @@ _as hunters are, searching the dust and everywhere, it can’t let a thing go by
 _Remember the dark rooms? Shuffling the papers –_
 ‍*I feel a hunter in myself*
 
----
+—
 
 Along the route, little knowing interactions with loners. A stone collector. An astrophysicist. You go in one direction and pass by someone going in the other.
 
@@ -64,10 +64,10 @@ Bigger contradictions as I enter the city. Sharp-edged buildings against the oce
 More retaliations: disgusting alleyways, disgusting canals with grime and dark waters. Horrible creatures accumulating in the filth. Rotting metal structures.
 (At the edges, roads turn to paths, which meet rivers and streams – driven insistently toward them. People talking and laughing in the dark woods. By day, a trailer shining in a clearing by a lake.)
 
----
+—
 
 I pulled into a clearing. There was dew on my boots and my toes felt the cold. The redwoods faced me and I couldn’t see around them. I was terrified, started my car and left.
 
----
+—
 
 From a posting at the campsite: ‘If you come across a cougar, appear large, back away slowly, and DO NOT BREAK EYE CONTACT.’
