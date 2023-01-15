@@ -15,7 +15,7 @@ startDate: October 2019
 # endDate:
 sortDate: 2019-10-01T00:00:00+00:00
 
-slug: colorado
+slug: "colorado"
 # url:
 featuredImg: ../images/art/colorado.jpg
 ---
