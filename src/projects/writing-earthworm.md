@@ -26,14 +26,14 @@ featuredImg: ../images/art/earthworm.jpg
 
 Small movement
 
-grasshopper on the rock
+grasshopper on the rock<br>
 animates the void
 
 —
 
 Drawing the white foam of the waves
 
-I, the scribe
+I, the scribe<br>
 scribbling
 
 —
@@ -42,7 +42,7 @@ Wake of the boat
 
 Road, black
 
-Trees shaking their branches
+Trees shaking their branches<br>
 over the rocks
 
 Occurring too fast
@@ -57,11 +57,11 @@ Totem: white wall of the museum; center, or home of the dispossessed; place of l
 
 ‍Earthworm on the forest floor
 
-quivering between
-over and under
+quivering between<br>
+over and under<br>
 out and in
 
-I, too,
+I, too,<br>
 scratching
 
 —
@@ -82,8 +82,8 @@ Not one but a series, generations moving upward
 
 —
 
-Back then the world was not a world of material.
-Anything could happen there. And when the earthquakes came, those people
+Back then the world was not a world of material.<br>
+Anything could happen there. And when the earthquakes came, those people<br>
 sank into the deepest terror imaginable; it was more than just shaking in their bodies
 
 —
@@ -108,8 +108,8 @@ From below, he waved us down to join
 
 **III. House**
 
-‘like a cornered animal
-he fought’
+like a cornered animal<br>
+he fought
 
-but each of us backed to our last wall
+but each of us backed to our last wall<br>
 facing out

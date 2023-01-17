@@ -41,7 +41,7 @@ const titleSty = css`
     gap: 8px;
     ${text.complete.xs}
     font-weight: 400;
-    color: ${colors.black.secondary};
+    color: ${colors.black.barely};
   }
 `
 
@@ -55,11 +55,11 @@ const gatsbyImg = css`
 `
 
 const mainText = css`
-  margin-top: 56px;
+  margin-top: 84px;
   p {
     font-size: 18px;
     line-height: 28px;
-    margin-bottom: 28px;
+    margin-bottom: 0.875em;
     strong {
       font-weight: 600;
     }
@@ -68,9 +68,9 @@ const mainText = css`
     ${text.complete.md};
     color: ${colors.black.darkest};
     font-weight: 500;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
     :not(:first-child) {
-      margin-top: 56px;
+      margin-top: 36px;
     }
   }
 `
@@ -93,11 +93,12 @@ export default function WritingTemplate({ data, location }) {
       <div className={mainBody}>
         <div className="container">
           <div className={titleSty}>
-            {title}
-            <Spacers.Vertical._8px />
             <div className="iotas">
-              {description} / {startDate}
+              {description}, {startDate}
+              <div className="divider"></div>
             </div>
+            <Spacers.Vertical._8px />
+            {title}
           </div>
           <div
             className={cx(description === "Essay" && essayFirstLine, mainText)}
