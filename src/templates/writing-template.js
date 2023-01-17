@@ -59,7 +59,7 @@ const mainText = css`
   p {
     font-size: 18px;
     line-height: 28px;
-    margin-bottom: 0.875em;
+    margin-bottom: 28px;
     strong {
       font-weight: 600;
     }
@@ -68,9 +68,9 @@ const mainText = css`
     ${text.complete.md};
     color: ${colors.black.darkest};
     font-weight: 500;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
     :not(:first-child) {
-      margin-top: 36px;
+      margin-top: 56px;
     }
   }
 `
