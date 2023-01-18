@@ -20,15 +20,4 @@ slug: "mirror"
 featuredImg: ../images/art/windows.jpg
 ---
 
-Minimalism is saying only the necessary things, and is motivated by deference and grace. Brutalism is not saying at all, and is motivated by fear and severity. Minimalism is a good thing, but it can become its own indulgence. It should guide form, but shouldn’t become an end.
-
-Use of half-contrasts, like restricting text to a certain size to appear understated, is like an Instagram filter: it can be a legitimate way to communicate a meaning, but more often than not it’s fluff. Likewise, removing conventions to construct a page more minimally isn’t genius.
-
-## Minimal / Brutal sit on the same axis as
-
-Respectful / Austere<br>
-Restrained / Repressed<br>
-Disciplined / Tyrannized<br>
-Humorous / Perverse<br>
-Decisive / Willful<br>
-Light / Starved
+A mirror waits across the main room of my apartment. I see it whenever I walk out of my room, and I check myself.Last night I walked out of my room to get water and was startled by a silhouette. I watched it as I moved to the kitchen. It was related to me, but not me. I was here, watching it, groggy, my consciousness sitting in my torso.In this state I felt my body echoing back to me. I saw the little boy my mom sees, moving with the grace of generations and the idiosyncrasies of an open soul.For a moment I knew everything I needed to know: move in the world as a child born of parents and act in it as a soul who wasn’t, who was inspired and will expire.

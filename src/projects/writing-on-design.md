@@ -2,7 +2,7 @@
 title: "On Design"
 # thumb:
 preview: "Honesty is a designer’s greatest asset. You decide to design when you’re dissatisfied with convenient answers. You dig to the root, and you trust that the right forms and structures will filter upward. This is intuition, or clarity. “Clarity / In the sense of transparence, // I don’t mean that much can be explained // Clarity in the sense of silence” (from George Oppen’s Of Being Numerous)."
-featured: n
+featured: y
 
 category: writing
 description: List
