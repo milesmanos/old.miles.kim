@@ -27,6 +27,7 @@ export default function ProjectLayout({ children }) {
       <div className={mainBody}>
         <Tabs />
         {children}
+        <Tabs />
       </div>
       <Footer />
     </div>
