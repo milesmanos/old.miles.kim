@@ -5,6 +5,7 @@ import "../styles/normalize.css"
 import Header from "./Header"
 import Tabs from "../components/Tabs"
 import Footer from "../components/Footer"
+import { colors } from "../styles/styleObjects/colors"
 
 const pageWrapper = css`
   display: flex;
@@ -20,6 +21,11 @@ const mainBody = css`
   gap: 72px;
 `
 
+const divider = css`
+  height: 1px;
+  border-bottom: 1px solid ${colors.line.light};
+`
+
 export default function ProjectLayout({ children }) {
   return (
     <div className={pageWrapper}>
@@ -27,6 +33,7 @@ export default function ProjectLayout({ children }) {
       <div className={mainBody}>
         <Tabs />
         {children}
+        <div className={divider} />
         <Tabs />
       </div>
       <Footer />
