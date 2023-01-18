@@ -20,4 +20,8 @@ slug: "mirror"
 featuredImg: ../images/art/windows.jpg
 ---
 
-A mirror waits across the main room of my apartment. I see it whenever I walk out of my room, and I check myself.Last night I walked out of my room to get water and was startled by a silhouette. I watched it as I moved to the kitchen. It was related to me, but not me. I was here, watching it, groggy, my consciousness sitting in my torso.In this state I felt my body echoing back to me. I saw the little boy my mom sees, moving with the grace of generations and the idiosyncrasies of an open soul.For a moment I knew everything I needed to know: move in the world as a child born of parents and act in it as a soul who wasn’t, who was inspired and will expire.
+A mirror waits across the main room of my apartment. I see it whenever I walk out of my room, and I check myself.
+
+Last night I walked out of my room to get water and was startled by a silhouette. I watched it as I moved to the kitchen. It was related to me, but not me. I was here, watching it, groggy, my consciousness sitting in my torso.
+
+In this state I felt my body echoing back to me. I saw the little boy my mom sees, moving with the grace of generations and the idiosyncrasies of an open soul.For a moment I knew everything I needed to know: move in the world as a child born of parents and act in it as a soul who wasn’t, who was inspired and will expire.
