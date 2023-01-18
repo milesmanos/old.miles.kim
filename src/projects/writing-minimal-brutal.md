@@ -17,7 +17,7 @@ sortDate: 2021-05-14T00:00:00+00:00
 
 slug: "minimal-brutal"
 # url:
-# featuredImg:
+featuredImg: ../images/art/colorado.jpg
 ---
 
 Minimalism is saying only the necessary things, and is motivated by deference and grace. Brutalism is not saying at all, and is motivated by fear and severity. Minimalism is a good thing, but it can become its own indulgence. It should guide form, but shouldn’t become an end.

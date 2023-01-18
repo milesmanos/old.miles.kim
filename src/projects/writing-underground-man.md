@@ -17,7 +17,7 @@ sortDate: 2019-12-01T00:00:00+00:00
 
 slug: "underground-man"
 # url:
-# featuredImg:
+featuredImg: ../images/art/dreamwound.jpg
 ---
 
 **1**

@@ -17,7 +17,7 @@ sortDate: 2019-12-01T00:00:00+00:00
 
 slug: "cigarette"
 # url:
-# featuredImg:
+featuredImg: ../images/art/i.jpg
 ---
 
 If I could only paint you a picture:
