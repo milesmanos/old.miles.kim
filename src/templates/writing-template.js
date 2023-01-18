@@ -61,7 +61,7 @@ const mainText = css`
     line-height: 28px;
     margin-bottom: 28px;
     strong {
-      font-weight: 600;
+      font-weight: 500;
     }
   }
   h2 {
@@ -78,7 +78,7 @@ const mainText = css`
 const essayFirstLine = css`
   ::first-line {
     font-weight: 500;
-    color: ${colors.black.darkest};
+    /* color: ${colors.black.darkest}; */
   }
 `
 

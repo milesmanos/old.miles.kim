@@ -2,7 +2,7 @@
 title: Heaven and Hell
 thumb: ../images/art/heaven-and-hell.jpg
 # preview:
-featured: y
+featured: n
 
 category: art
 description: "Painting: acrylic, charcoal, oil pastel, pencil on cardboard."

@@ -44,22 +44,13 @@ In the same sense that science and meditation are both means to understanding, d
 
 ## Design / Art sit on the same axis as:
 
-_Journey / Vista_
-
-_Trellis / Vines_
-
-_Hand of God / Image of God_
-
-_Structure / Fluid_
-
-_System / Life_
-
-_Speech / Song_
-
-_Distinctions / Oneness_
-
-_Body / Soul_
-
-_How / Why_
-
-_Toward / Beyond_
+Journey / Vista<br>
+Trellis / Vines<br>
+Hand of God / Image of God<br>
+Structure / Fluid<br>
+System / Life<br>
+Speech / Song<br>
+Distinctions / Oneness<br>
+Body / Soul<br>
+How / Why<br>
+Toward / Beyond
