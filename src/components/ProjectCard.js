@@ -103,7 +103,7 @@ const ProjectCard = ({ project, children }) => {
             />
           </>
         ) : (
-          <div>
+          <div style={{ width: "100%" }}>
             {project.frontmatter.preview}
             <div className="inherit">...</div>
           </div>

@@ -2,7 +2,7 @@
 title: "Puncture"
 # thumb:
 preview: "Funny enough, I’ve never shared this song with anyone: “Puncture”, by Dot Hacker. The singer (I don’t know his name) starts in a slow whisper of a wail:"
-featured: y
+featured: n
 
 category: writing
 description: Newsletter post
