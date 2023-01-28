@@ -5,7 +5,7 @@ preview: "Honesty is a designer’s greatest asset. You decide to design when yo
 featured: y
 
 category: writing
-description: List
+description: Fragmented essay
 
 length: 2 min read
 # size:

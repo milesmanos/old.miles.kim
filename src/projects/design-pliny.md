@@ -5,7 +5,7 @@ thumb: ../images/thumbs/design-pliny.jpg
 featured: y
 
 category: design
-description: "Digital product: a collaborative tool for prompt engineers."
+description: "Digital product: create, share, and deploy GPT-3-based apps."
 
 # length:
 # size:
