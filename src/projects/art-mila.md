@@ -2,7 +2,7 @@
 title: Mila
 thumb: ../images/art/mila.jpg
 # preview:
-featured: y
+featured: n
 
 category: art
 description: "Painting: watercolor."
