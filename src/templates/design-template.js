@@ -92,13 +92,13 @@ export default function DesignTemplate({ data, location }) {
       <div className={mainBody}>
         <div className="container">
           <Spacers.Vertical._0px />
-          <div className={titleSty}>
+          {/* <div className={titleSty}>
             <div className="iotas">
               {startDate} {endDate}
               <div className="divider"></div>
             </div>
             <Spacers.Vertical._8px />
-          </div>
+          </div> */}
           <GatsbyImage
             image={featuredImg.childImageSharp.gatsbyImageData}
             alt={title}
