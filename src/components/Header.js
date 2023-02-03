@@ -150,6 +150,12 @@ export default function Header({ isClear }) {
       {showInfo && (
         <>
           <div className={infoOverlay}>
+            <button
+              className={clickOutToClose}
+              onClick={() => handleCloseInfo()}
+            >
+              {" "}
+            </button>
             <div className={infoBox}>
               <div className={mockNav}>
                 <div className={flexGrow}>
@@ -243,12 +249,6 @@ export default function Header({ isClear }) {
                 </Button>
               </div>
             </div>
-            <button
-              className={clickOutToClose}
-              onClick={() => handleCloseInfo()}
-            >
-              {" "}
-            </button>
           </div>
         </>
       )}
