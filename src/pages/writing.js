@@ -37,7 +37,7 @@ export const query = graphql`
   query WritingQuery {
     projects: allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "writing" } } }
-      sort: { order: DESC, fields: frontmatter___sortDate }
+      sort: { frontmatter: { sortDate: DESC } }
     ) {
       nodes {
         frontmatter {

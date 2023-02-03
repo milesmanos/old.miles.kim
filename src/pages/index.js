@@ -43,7 +43,7 @@ export const query = graphql`
   query HomeQuery {
     projects: allMarkdownRemark(
       filter: { frontmatter: { featured: { eq: "y" } } }
-      sort: { order: DESC, fields: frontmatter___sortDate }
+      sort: { frontmatter: { sortDate: DESC } }
     ) {
       nodes {
         frontmatter {

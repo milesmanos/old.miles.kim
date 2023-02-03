@@ -34,7 +34,7 @@ export const query = graphql`
   query ArtQuery {
     projects: allMarkdownRemark(
       filter: { frontmatter: { category: { eq: "art" } } }
-      sort: { order: DESC, fields: frontmatter___sortDate }
+      sort: { frontmatter: { sortDate: DESC } }
     ) {
       nodes {
         frontmatter {
