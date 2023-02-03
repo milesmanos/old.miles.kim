@@ -193,22 +193,24 @@ export default function Header({ isClear }) {
                     <Button
                       isFullWidth
                       onClick={() => {
-                        setCopiedText("i@miles.kim")
-                        navigator.clipboard.writeText("i@miles.kim")
+                        setCopiedText("milesarthurkim@gmail.com")
+                        navigator.clipboard.writeText(
+                          "milesarthurkim@gmail.com"
+                        )
                         setTimeout(() => {
                           setCopiedText("")
                         }, 2000)
                       }}
-                      isDisabled={copiedText === "i@miles.kim"}
+                      isDisabled={copiedText === "milesarthurkim@gmail.com"}
                       isBlack
                     >
                       <div className="text">
-                        {copiedText === "i@miles.kim"
+                        {copiedText === "milesarthurkim@gmail.com"
                           ? "Copied – can’t wait!"
-                          : "i@miles.kim"}
+                          : "milesarthurkim@gmail.com"}
                       </div>
                       <div className="icon">
-                        {copiedText === "i@miles.kim" ? (
+                        {copiedText === "milesarthurkim@gmail.com" ? (
                           <CheckSVG size={16} />
                         ) : (
                           <CopySVG size={16} />

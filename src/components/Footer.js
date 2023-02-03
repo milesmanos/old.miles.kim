@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <div className={navLayout}>
       <div>Miles Kim</div>
-      <div>i@miles.kim</div>
+      <div>milesarthurkim@gmail.com</div>
     </div>
   )
 }
